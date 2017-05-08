@@ -15,8 +15,7 @@ $colors: (
 	"Orange": #e86d02,
 	"Yellow": #ff961e,
   "Pink": #ea4c89,
-  "Purple": #8b008b,
-	"brightYellow": #ffee00
+  "Purple": #8b008b
 );
 
 @each $color-name, $color-value in $colors{
