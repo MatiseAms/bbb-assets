@@ -1,0 +1,46 @@
+%button-icon{
+	padding-right: 100px;
+}
+%button-icon-after{
+	display: inline-block; margin-left: 30px;
+}
+
+
+@mixin extend-icons($use: null){
+	@if $use == "button"{
+		@extend %button-icon;
+	}
+	@each $icon-name, $icon-value in $icons{
+		@debug $icon-name;
+	}
+	&-arrow-right{
+		@if $use == "button"{
+			@extend %button-icon;
+		}
+		&:after{
+			@if $use == "button"{
+				@extend %button-icon-after;
+			}
+			content: ">";
+		}
+	}
+	&-arrow-left{
+		@if $use == "button"{
+			@extend %button-icon;
+		}
+		&:after{
+			@if $use == "button"{
+				@extend %button-icon-after;
+			}
+			content: "<";
+		}
+	}
+}
+
+
+%icon{
+	@include extend-icons();
+}
+%button-icon{
+	@include extend-icons("button");
+}
