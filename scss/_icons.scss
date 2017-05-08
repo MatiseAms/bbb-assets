@@ -1,38 +1,27 @@
-%button-icon{
+%default-button-icon{
 	padding-right: 100px;
 }
-%button-icon-after{
-	display: inline-block; margin-left: 30px;
+%default-button-icon-after{
+	font-family: $UI-font-family; display: inline-block; margin-left: 30px; font-size: rem(10);
 }
 
 
 @mixin extend-icons($use: null){
 	@if $use == "button"{
-		@extend %button-icon;
+		@extend %default-button-icon;
 	}
-	@each $icon-name, $icon-value in $icons{
-		@debug $icon-name;
-	}
-	&-arrow-right{
-		@if $use == "button"{
-			@extend %button-icon;
-		}
-		&:after{
+	@each $icon-name, $icon-value in $UI-iconset{
+		&-#{$icon-name}{
 			@if $use == "button"{
-				@extend %button-icon-after;
+				@extend %default-button-icon;
 			}
-			content: ">";
-		}
-	}
-	&-arrow-left{
-		@if $use == "button"{
-			@extend %button-icon;
-		}
-		&:after{
-			@if $use == "button"{
-				@extend %button-icon-after;
+			&:after{
+				@if $use == "button"{
+					@extend %default-button-icon-after;
+				}
+				content: icon($icon-name,$UI-iconset);
+				@debug $icon-name;
 			}
-			content: "<";
 		}
 	}
 }
@@ -42,5 +31,6 @@
 	@include extend-icons();
 }
 %button-icon{
+	content: "hoi";
 	@include extend-icons("button");
 }
