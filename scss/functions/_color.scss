@@ -22,3 +22,26 @@
 		}
 	}
 }
+@function brightness($color,$percentage: true){
+	$sum: red($color) + green($color) + blue($color);  // sum
+	$average: (((red($color) / 255) * 100) + ((green($color) / 255) * 100) + ((blue($color) / 255) * 100)) / 3; // average
+	//@debug "red: #{red($color)} / green: #{green($color)} / blue: #{blue($color)}";
+
+
+	//@debug $average;
+	@if $percentage{
+		@return percentage($sum / (255*3));
+	} @else{
+		@debug ($sum / (255*3) * 100);
+		@return ($sum / (255*3) * 100);
+	}
+}
+
+
+@function contra($color){
+	@if brightness($color) > 50{
+		@return color(Black);
+	} @else{
+		@return color(White);
+	}
+}

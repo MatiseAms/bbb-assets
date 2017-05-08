@@ -1,0 +1,48 @@
+%default-button-icon{
+	padding-right: 100px;
+}
+%default-button-icon-after{
+	font-family: $UI-font-family; display: inline-block; margin-left: 30px; font-size: rem(8);
+}
+
+
+@mixin extend-icons($use: null){
+	@if $use == "button"{
+		@extend %default-button-icon;
+	}
+	@each $icon-name, $icon-value in $UI-iconset{
+		&-#{$icon-name}{
+			@if $use == "button"{
+				@extend %default-button-icon;
+			}
+			&:after{
+				@if $use == "button"{
+					@extend %default-button-icon-after;
+				}
+				content: icon($icon-name,$UI-iconset);
+				@debug $icon-name;
+			}
+
+			// Specific for Arrow Right
+			@if $icon-name == "arrow-right"{
+				&:after{
+					margin-left: 40px;
+				}
+				&:hover{
+					&:after{
+						animation: bumpRight 1.2s;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+%icon{
+	@include extend-icons();
+}
+%button-icon{
+	content: "hoi";
+	@include extend-icons("button");
+}

@@ -1,71 +1,41 @@
-%default-button{
-	overflow: hidden; position: relative; display: inline-block; height: rem(60); padding: 0 rem(30); width: auto; line-height: rem(60); border-radius: rem(30); font-weight: 600; white-space: nowrap; margin-right: 20px; font-size: rem(14); -webkit-transform-style: preserve-3d; letter-spacing: letter-spacing(1,-25);
-	/*Basic Hover */
-	&:before{
-		content: ""; display: block; width: 100%; height: 100%; position: absolute; left: 0; top: 0; transform: scale(0,1); transform-origin: 0 50%; transition: $transition $bezier;
+@mixin bg-color($bg-color){
+	background-color: $bg-color; color: contra($bg-color); background-image: linear-gradient(to right, transparent 0%, transparent 25%, contra($bg-color) 25%, contra($bg-color) 50%, transparent 50%); background-size: 960px 100%; -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+	&:hover{
+		animation: slideBackground 0.8s $bezier;
 	}
 }
+
+%default-button{
+	overflow: hidden; position: relative; display: inline-block; height: rem(60); padding: 0 rem(30); width: auto; line-height: rem(60); border-radius: rem(30); font-weight: 600; white-space: nowrap; font-size: rem(14); -webkit-transform-style: preserve-3d; letter-spacing: letter-spacing(1,-25);
+	@media #{$mobile}{
+		height: rem(50); padding: 0 rem(25); line-height: 50px; border-radius: rem(25);
+	}
+}
+
+
 %button{
 	/* basic settings */
 	@extend %default-button;
 	&-dark{
-		@extend %default-button; background-color: color(Black); color: color(White);
-		&:before{
-			background-color: color(White,0.05);
-		}
+		@extend %default-button;
+		@include bg-color(color(Black));
 		&-ghost{
-			@extend %default-button; background-color: color(White,0); box-shadow: 0 0 0 2px color(Black) inset; color: color(Black);
-			&:before{
-				background-color: color(Black,0.05);
-			}
+			@extend %default-button; box-shadow: 0 0 0 2px color(Black) inset;
+			@include bg-color(color(White)); background-color: transparent;
+		}
+		&-naked{
+			@extend %default-button; @include bg-color(color(White)); background-color: transparent; box-shadow: none;
 		}
 	}
 	&-light{
-		@extend %default-button; background-color: color(White); color: color(Black);
-		&:before{
-			background-color: color(Black,0.05);
-		}
+		@extend %default-button;
+		@include bg-color(color(White));
 		&-ghost{
-			@extend %default-button; background-color: color(Black,0); box-shadow: 0 0 0 2px color(White) inset; color: color(White);
-			&:before{
-				background-color: color(White,0.05);
-			}
+			@extend %default-button; box-shadow: 0 0 0 2px color(White) inset;
+			@include bg-color(color(Black)); background-color: transparent;
+		}
+		&-naked{
+			@extend %default-button; @include bg-color(color(Black)); background-color: transparent; box-shadow: none;
 		}
 	}
-	&:hover:before{
-		transform: scale(1,1);
-	}
 }
-
-/* Icon Buttons
-%icon{
-  &:after{
-    display: inline-block; margin-left: 40px;
-  }
-  &-arrow-right{
-    &:after{
-      content: ">";
-    }
-    &:hover{
-      &:after{
-        @at-root{
-          @include keyframes(bumpRight){
-            0%{
-              transform: translateX(0%);
-            }
-            50%{
-              transform: translateX(100%);
-            }
-            100%{
-              transform: translateX(0%);
-            }
-          }
-        }
-        transform: translate(20px, 20px); animation: bumpRight 0.3s $bezier forwards;
-      }
-    }
-  }
-}
-}
-}
- */

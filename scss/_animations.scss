@@ -1,0 +1,26 @@
+@include keyframes(bumpRight){
+	0%{
+		transform: translateX(0%); opacity: 1;
+	}
+	50%{
+		transform: translateX(700%); opacity: 1;
+	}
+	51%{
+		transform: translateX(700%); opacity: 0;
+	}
+	52%{
+		transform: translateX(-500%); opacity: 0;
+	}
+	100%{
+		transform: translateX(0%); opacity: 1;
+	}
+}
+
+@include keyframes(slideBackground){
+	0%{
+		background-position: 100% 960px;
+	}
+	100%{
+		background-position: 0 0;
+	}
+}
