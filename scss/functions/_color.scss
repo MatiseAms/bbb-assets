@@ -1,0 +1,24 @@
+@function color($value, $rgba: false, $colorset: $colors, $warning: true, $boolean: false){
+	$color: map-get($colorset, $value);
+	@if $warning == true{
+		@if $color == null{
+			@if color($value, $rgba, $main-colors, false, true){
+				@return color($value, $rgba, $main-colors);
+			}
+			@warn "color: \"#{$value}\" doesn't exist";
+		}
+	}
+	@if $boolean == true{
+		@if $color == null{
+			@return false;
+		} @else{
+			@return true;
+		}
+	} @else{
+		@if $rgba != false{
+			@return rgba($color,$rgba);
+		} @else{
+			@return $color;
+		}
+	}
+}
