@@ -2,7 +2,7 @@
 	padding-right: 100px;
 }
 %default-button-icon-after{
-	font-family: $UI-font-family; display: inline-block; margin-left: 30px; font-size: rem(10);
+	font-family: $UI-font-family; display: inline-block; margin-left: 30px; font-size: rem(8);
 }
 
 
@@ -21,6 +21,18 @@
 				}
 				content: icon($icon-name,$UI-iconset);
 				@debug $icon-name;
+			}
+
+			// Specific for Arrow Right
+			@if $icon-name == "arrow-right"{
+				&:after{
+					margin-left: 40px;
+				}
+				&:hover{
+					&:after{
+						animation: bumpRight 1.2s;
+					}
+				}
 			}
 		}
 	}
