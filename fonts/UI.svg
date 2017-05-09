@@ -2,7 +2,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20161003 at Mon May  8 13:46:25 2017
+Created by FontForge 20161003 at Tue May  9 10:35:41 2017
  By Sil van Diepen
 </metadata>
 <defs>
@@ -15,7 +15,7 @@ Created by FontForge 20161003 at Mon May  8 13:46:25 2017
     panose-1="2 0 5 9 0 0 0 0 0 0"
     ascent="448"
     descent="-64"
-    bbox="17 -51 461 435"
+    bbox="0 -55 461 439"
     underline-thickness="25"
     underline-position="-76"
     unicode-range="U+F1001-F1006"
@@ -31,11 +31,11 @@ d="M17 0v341h136v-341h-136zM34 17h102v307h-102v-307z" />
     <glyph glyph-name="arrow-left" unicode="&#xf1001;" 
 d="M208 192l178 -178q11 -11 11 -27t-11.5 -27t-27.5 -11t-27 11l-205 205q-11 11 -11 27t11 27l205 205q12 11 27.5 11t27 -11t11.5 -27t-11 -27z" />
     <glyph glyph-name="arrow-right" unicode="&#xf1002;" 
-d="M386 219q7 -7 9.5 -17t0 -20t-9.5 -17l-205 -205q-11 -11 -27 -11t-27.5 11t-11.5 27t11 27l178 178l-177 178q-12 11 -12 27t11.5 27t27.5 11t27 -11z" />
+d="M133 143q6 -5 6 -13t-5 -14l-102 -101q-5 -5 -13 -5t-13.5 5.5t-5.5 13.5t6 13l87 88l-87 87q-6 6 -6 14t5.5 13.5t13.5 5.5t13 -6z" />
     <glyph glyph-name="close" unicode="&#xf1003;" 
-d="M428 310l-118 -118l118 -118l-54 -54l-118 118l-118 -118l-54 54l118 118l-118 118l54 54l118 -118l118 118z" />
+d="M229 206l-78 -78l78 -78l-36 -37l-78 79l-79 -79l-36 37l79 78l-79 78l36 37l79 -79l78 79z" />
     <glyph glyph-name="location" unicode="&#xf1004;" 
-d="M373.5 343.5q48.5 -48.5 48.5 -117.5t-49 -118l-117 -117l-118 117q-48 49 -48 118t48.5 117.5t117.5 48.5t117.5 -48.5zM324.5 157.5q28.5 28.5 28.5 68.5t-28.5 68.5t-68.5 28.5t-68.5 -28.5t-28.5 -68.5t28.5 -68.5t68.5 -28.5t68.5 28.5z" />
+d="M401 379q60 -60 60 -144.5t-61 -144.5l-144 -145l-145 145q-60 60 -60 144.5t60 144.5t145 60t145 -60zM340.5 150q34.5 35 34.5 84.5t-35 84.5t-84.5 35t-84 -35t-34.5 -84.5t35 -84.5t84.5 -35t84 35z" />
     <glyph glyph-name="plus" unicode="&#xf1005;" 
 d="M294 230h167v-76h-167v-167h-76v167h-167v76h167v167h76v-167z" />
     <glyph glyph-name="search" unicode="&#xf1006;" 

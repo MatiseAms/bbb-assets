@@ -1,8 +1,13 @@
+@import "icons/icons";
+
 %default-button-icon{
-	padding-right: 100px;
+	padding-right: rem(22) !important;
 }
 %default-button-icon-after{
-	font-family: $UI-font-family; display: inline-block; margin-left: 30px; font-size: rem(8);
+	font-family: $UI-font-family; display: inline-block; margin-left: 15px; font-size: rem(16);
+	@media #{$mobile}{
+		margin-left: 25px;
+	}
 }
 
 
@@ -20,13 +25,16 @@
 					@extend %default-button-icon-after;
 				}
 				content: icon($icon-name,$UI-iconset);
-				@debug $icon-name;
 			}
 
 			// Specific for Arrow Right
 			@if $icon-name == "arrow-right"{
+				padding-right: rem(19) !important;
 				&:after{
-					margin-left: 40px;
+					margin-left: 40px; width: auto;
+					@media #{$mobile}{
+						margin-left: 25px;
+					}
 				}
 				&:hover{
 					&:after{
@@ -43,6 +51,5 @@
 	@include extend-icons();
 }
 %button-icon{
-	content: "hoi";
 	@include extend-icons("button");
 }
