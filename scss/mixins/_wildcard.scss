@@ -1,0 +1,11 @@
+@mixin wildcard($value,$next: false, $type:'class'){
+  @if $next{
+    & + [#{$type}^="#{$value}"],& + [#{$type}*=" #{$value}"]{
+      @content;
+    }
+  } @else {
+    &[#{$type}^="#{$value}"],&[#{$type}*=" #{$value}"]{
+      @content;
+    }
+  }
+}

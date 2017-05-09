@@ -1,6 +1,3 @@
-
-$base-fontpath: '../fonts';
-
 @mixin font-face( $name,  $font-files,  $eot: false, $weight: normal, $style: normal) {
   $iefont: unquote("#{$eot}?#iefix");
   @font-face {
@@ -23,10 +20,10 @@ $base-fontpath: '../fonts';
 //	@include font-face("#{$name}", font-files("#{$file}.woff", "#{$file}.ttf", "#{$file}.svg", "#{$file}.otf"), "#{$file}.eot", $weight, $type);
 	@font-face {
 		font-family: $name;
-		src:url("#{$base-fontpath}/#{$file}.eot?#iefix") format('embedded-opentype'),/* IE6-IE8 */
-  	  url("#{$base-fontpath}/#{$file}.woff") format('woff'),/* Pretty Modern Browsers */
-			url("#{$base-fontpath}/#{$file}.ttf") format('truetype'),/* Safari, Android, iOS */
-			url("#{$base-fontpath}/#{$file}.svg##{$name}") format('svg'); /* Legacy iOS */
+		src:url("#{$bbb-font-path}/#{$file}.eot?#iefix") format('embedded-opentype'),/* IE6-IE8 */
+  	  url("#{$bbb-font-path}/#{$file}.woff") format('woff'),/* Pretty Modern Browsers */
+			url("#{$bbb-font-path}/#{$file}.ttf") format('truetype'),/* Safari, Android, iOS */
+			url("#{$bbb-font-path}/#{$file}.svg##{$name}") format('svg'); /* Legacy iOS */
 		font-weight: $weight;
 		font-style: $type;
 	}
@@ -59,7 +56,7 @@ $base-fontpath: '../fonts';
 @mixin baseline($font-size, $scale: 2) {
 
 	// rhythm unit
-	$rhythm: $base-line-height * $font-size / $scale;
+	$rhythm: $bbb-line-height * $font-size / $scale;
 
 	// number of rhythm units that can fit the font-size
 	$lines: ceil(($font-size + 0.001px) / $rhythm);
@@ -90,7 +87,7 @@ $base-fontpath: '../fonts';
 	// if you use this mixin only on elements that have one direction margins
 	// http://csswizardry.com/2012/06/single-direction-margin-declarations/
 	// you can use this method with no worries.
-	// this method assumes the direction is down and the margin is $base-line-height
+	// this method assumes the direction is down and the margin is $bbb-line-height
 	padding-top: $baseline-distance + em;
-	margin-bottom: $base-line-height - $baseline-distance + em;
+	margin-bottom: $bbb-line-height - $baseline-distance + em;
 }
