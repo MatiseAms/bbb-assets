@@ -1,3 +1,3 @@
 # BBB assets based on styleguide
 
-For instructions please visit [the BBB styleguide](bbb.matise.design)
+For instructions please visit [the BBB styleguide](http://bbb.matise.design)
