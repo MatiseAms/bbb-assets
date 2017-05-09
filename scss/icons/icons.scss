@@ -9,11 +9,10 @@ $UI-font-name: "UI"; //
 $UI-font-family: #{$UI-font},sans-serif; //
 // include UI font
 @include font-include($UI-font,$UI-font-name,normal,normal);
-%UI-font-family{
-	font-family: $UI-font-family;
-}
+%UI-font-family{ font-family: $UI-font-family; }
 //
 // Collect all fonts
-$icons-merged: map-collect($UI-iconset); $icons: (
+$icons-merged: map-collect($UI-iconset);
+$icons: (
   UI: $UI-iconset
 );
