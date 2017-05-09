@@ -1,25 +1,25 @@
 
 @function calculateRem($size) {
-  $remSize: $size / #{$base-font-size}px;
+  $remSize: $size / #{$bbb-font-size}px;
   @return $remSize * 1rem;
 }
 
-@function convert-to-rem($value, $base-value: $rem-base)  {
-  $value: strip-unit($value) / strip-unit($base-value) * 1rem;
+@function convert-to-rem($value, $bbb-value: $rem-base)  {
+  $value: strip-unit($value) / strip-unit($bbb-value) * 1rem;
   @if ($value == 0rem) { $value: 0; } // Turn 0rem into 0
   @return $value;
 }
 
-@function rem-calc($values, $base-value: $base-font-size) {
+@function rem-calc($values, $bbb-value: $bbb-font-size) {
 	$max: length($values);
 	@if $max == 1 {
-		@return convert-to-rem(nth($values, 1), $base-value);
+		@return convert-to-rem(nth($values, 1), $bbb-value);
 	}
 
 	$remValues: ();
 
 	@for $i from 1 through $max {
-		$remValues: append($remValues, convert-to-rem(nth($values, $i), $base-value));
+		$remValues: append($remValues, convert-to-rem(nth($values, $i), $bbb-value));
 	}
 
 	@return $remValues;

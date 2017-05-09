@@ -1,7 +1,12 @@
 /*  Base values */
-$base-font-size: 16; //
-$base-line-height: 1.5; //
-$base-letter-spacing: 50; //
+$bbb-font-size: 16; //
+$bbb-font-path: "../fonts" !default; //
+$bbb-line-height: 1.5; //
+$bbb-letter-spacing: 50; //
+
+/* grid */
+$bbb-design-width: 1920; //
+$bbb-grid-columns: 24; //
 
 /*  Main values */
 $border-radius: rem(3); //

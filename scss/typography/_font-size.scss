@@ -1,0 +1,89 @@
+// headers
+h1, h2, h3, h4, h5, h6{
+	font-family: $bbb-main-font-family; text-align: left; font-weight: $font-bold; padding: 0; margin: 0;
+	&.sub{
+		font-weight: $font-light;
+	}
+}
+h1{
+	font-size: grid(0.75); line-height: grid((0.75 * 1.25)); font-weight: $font-bold; $spacing: (0.75 * 0.25); letter-spacing: -#{$spacing}vw;
+	@media #{$mobile}{
+		font-size: rem(24); line-height: rem(24 * 1.25); letter-spacing: letter-spacing(rem(24),-25);
+	}
+}
+h2{
+	font-size: grid(0.75); line-height: grid((0.75 * 1.25)); font-weight: $font-bold; $spacing: ((0.75 * 0.25) / 10); letter-spacing: -#{$spacing}vw;
+	@media #{$mobile}{
+		font-size: rem(24); line-height: rem(24 * 1.25); letter-spacing: letter-spacing(rem(24),-25);
+	}
+}
+h3{
+	font-size: grid(0.4); line-height: grid((0.4 * 1.25)); font-weight: $font-bold; $spacing: ((0.4 * 0.25) / 10); letter-spacing: -#{$spacing}vw;
+	@media #{$mobile}{
+		font-size: rem(20); line-height: rem(20 * 1.25); letter-spacing: letter-spacing(rem(20),-25);
+	}
+}
+h4{
+	font-size: grid(0.3); line-height: grid((0.3 * 1.25)); font-weight: $font-bold; $spacing: (0.3 * 0.25); letter-spacing: -#{$spacing}vw;
+	@media #{$mobile}{
+		font-size: rem(16); line-height: rem(16 * 1.25); letter-spacing: letter-spacing(rem(16),-25);
+	}
+}
+h5{
+	font-size: rem(14); line-height: rem((14 * 1.25)); padding-left: grid(0.5); font-weight: $font-regular; letter-spacing: letter-spacing(rem(14),-25);
+}
+h6{
+	font-size: rem(10); line-height: rem(10);
+}
+
+
+h2, h3, h4{
+	&+h5{
+		margin-top: grid(0.4);
+	}
+}
+
+h1+h5{
+	padding-left: 0; font-family: $bbb-price-font-family; text-transform: uppercase;
+}
+
+
+// make font styles
+
+.font-bold, strong{
+	font-weight: $font-bold;
+}
+small{
+	font-size: smaller;
+}
+del{
+	text-decoration: line-through;
+}
+ins{
+	text-decoration: underline;
+}
+sub{
+	vertical-align: sub; font-size: smaller;
+}
+sup{
+	vertical-align: sup; font-size: smaller;
+}
+
+p{
+	margin: 0; padding: 0; font-size: rem(16); line-height: rem(32); font-family: $bbb-second-font-family; font-weight: 400;
+	&.text-tiny{
+		font-size: rem(12);
+	}
+	&.text-small{
+		font-size: rem(14);
+	}
+	&.text-regular{
+		font-size: rem(16);
+	}
+	&.text-large{
+		font-size: rem(18);
+	}
+	&.text-xlarge{
+		font-size: rem(24);
+	}
+}
