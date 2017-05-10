@@ -2,7 +2,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20161003 at Tue May  9 10:35:41 2017
+Created by FontForge 20161003 at Wed May 10 16:01:44 2017
  By Sil van Diepen
 </metadata>
 <defs>
@@ -15,10 +15,10 @@ Created by FontForge 20161003 at Tue May  9 10:35:41 2017
     panose-1="2 0 5 9 0 0 0 0 0 0"
     ascent="448"
     descent="-64"
-    bbox="0 -55 461 439"
+    bbox="0 -55 614 439"
     underline-thickness="25"
     underline-position="-76"
-    unicode-range="U+F1001-F1006"
+    unicode-range="U+F1001-F1007"
   />
 <missing-glyph 
 d="M17 0v341h136v-341h-136zM34 17h102v307h-102v-307z" />
@@ -33,12 +33,15 @@ d="M208 192l178 -178q11 -11 11 -27t-11.5 -27t-27.5 -11t-27 11l-205 205q-11 11 -1
     <glyph glyph-name="arrow-right" unicode="&#xf1002;" 
 d="M133 143q6 -5 6 -13t-5 -14l-102 -101q-5 -5 -13 -5t-13.5 5.5t-5.5 13.5t6 13l87 88l-87 87q-6 6 -6 14t5.5 13.5t13.5 5.5t13 -6z" />
     <glyph glyph-name="close" unicode="&#xf1003;" 
-d="M229 206l-78 -78l78 -78l-36 -37l-78 79l-79 -79l-36 37l79 78l-79 78l36 37l79 -79l78 79z" />
-    <glyph glyph-name="location" unicode="&#xf1004;" 
+d="M384 206l-78 -78l78 -78l-36 -37l-78 79l-78 -79l-37 37l79 78l-79 78l37 37l78 -79l78 79z" />
+    <glyph glyph-name="loading" unicode="&#xf1004;" 
+d="M0 134.5q0 21.5 15 36.5t36 15t36 -15t15 -37q0 -14 -6.5 -25.5t-18.5 -18.5t-26 -7q-21 0 -36 15t-15 36.5zM256 134.5q0 21.5 15 36.5t36 15t36 -15t15 -37q0 -14 -6.5 -25.5t-18.5 -18.5t-26 -7q-21 0 -36 15t-15 36.5zM512 134.5q0 21.5 15 36.5t36 15t36 -15t15 -37
+q0 -10 -4 -19.5t-10.5 -16.5t-16 -11t-20.5 -4q-21 0 -36 15t-15 36.5z" />
+    <glyph glyph-name="location" unicode="&#xf1005;" 
 d="M401 379q60 -60 60 -144.5t-61 -144.5l-144 -145l-145 145q-60 60 -60 144.5t60 144.5t145 60t145 -60zM340.5 150q34.5 35 34.5 84.5t-35 84.5t-84.5 35t-84 -35t-34.5 -84.5t35 -84.5t84.5 -35t84 35z" />
-    <glyph glyph-name="plus" unicode="&#xf1005;" 
+    <glyph glyph-name="plus" unicode="&#xf1006;" 
 d="M294 230h167v-76h-167v-167h-76v167h-167v76h167v167h76v-167z" />
-    <glyph glyph-name="search" unicode="&#xf1006;" 
+    <glyph glyph-name="search" unicode="&#xf1007;" 
 d="M457 9l-18 -18l-88 88q-46 -41 -108 -41q-45 0 -83.5 22.5t-60.5 61t-22 83.5q0 69 49 117.5t117.5 48.5t117.5 -48.5t49 -117.5q0 -62 -40 -108zM243 64q58 0 99.5 41.5t41.5 99.5t-41.5 99.5t-99.5 41.5t-99.5 -41.5t-41.5 -99.5t41.5 -99.5t99.5 -41.5z" />
   </font>
 </defs></svg>
