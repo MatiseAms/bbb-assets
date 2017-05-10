@@ -25,14 +25,14 @@ $bbb-main-font-family: #{$bbb-main-font},sans-serif; //
 	font-family: $bbb-main-font-family;
 }
 //
-$bbb-second-font: "Avenir"; //
-$bbb-second-font-name: "Avenir-Medium"; //
-$bbb-second-font-family: #{$bbb-second-font},sans-serif; //
+$bbb-body-font: "Avenir"; //
+$bbb-body-font-name: "Avenir-Medium"; //
+$bbb-body-font-family: #{$bbb-body-font},sans-serif; //
 // include main font
 //@include font-list($second-font,$second-font-name,$bbb-main-font-weights,normal);
-@include font-include($bbb-second-font,$bbb-second-font-name,normal,normal);
-%bbb-second-font-family{
-	font-family: $bbb-second-font-family;
+@include font-include($bbb-body-font,$bbb-body-font-name,normal,normal);
+%bbb-body-font-family{
+	font-family: $bbb-body-font-family; font-weight: normal;
 }
 //
 $bbb-price-font: "RobotoCondensed-Regular"; //
@@ -42,4 +42,7 @@ $bbb-price-font-family: #{$bbb-price-font},sans-serif; //
 @include font-include($bbb-price-font,$bbb-price-font-name,normal,normal);
 %bbb-price-font-family{
 	font-family: $bbb-price-font-family; text-transform: uppercase; letter-spacing: letter-spacing(1rem,-25);
+}
+%bbb-price-font-family{
+	font-family: $bbb-price-font-family; font-weight: normal; text-transform: none;
 }
