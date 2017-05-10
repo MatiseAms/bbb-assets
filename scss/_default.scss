@@ -20,3 +20,8 @@ $transition-time: 0.2; //
 $transition: #{$transition-time}s; //
 $cubic-bezier: cubic-bezier(0.75,0.75,0.25,0.50); //
 $bezier: $cubic-bezier;
+
+
+%reset{
+	-webkit-appearance: none; outline: none; box-sizing: border-box; -webkit-overflow-scrolling: touch; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; -webkit-backface-visibility: hidden;
+}
