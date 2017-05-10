@@ -1,0 +1,43 @@
+h1{
+	@extend %bbb-h1;
+}
+h2{
+	@extend %bbb-h2;
+}
+h3{
+	@extend %bbb-h3;
+}
+h4{
+	@extend %bbb-h4;
+}
+h5{
+	@extend %bbb-h5;
+}
+h5{
+	@extend %bbb-h6;
+}
+
+
+// make font styles
+.font-bold, strong{
+	@extend %bbb-bold;
+}
+small{
+	@extend %bbb-small;
+}
+del{
+	@extend %bbb-del;
+}
+ins{
+	@extend %bbb-ins;
+}
+sub{
+	@extend	%bbb-sub;
+}
+sup{
+	@extend	%bbb-sup;
+}
+
+p{
+	@extend %bbb-p;
+}
