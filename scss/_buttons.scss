@@ -1,5 +1,5 @@
 @mixin bg-color($bg-color){
-	background-color: $bg-color; color: contra($bg-color); background-image: linear-gradient(to right, transparent 0%, transparent 25%, contra($bg-color) 25%, contra($bg-color) 50%, transparent 50%); background-size: 960px 100%; -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+	background-color: $bg-color; color: contra($bg-color); background-image: linear-gradient(to right, transparent 0%, transparent 25%, contra($bg-color) 25%, contra($bg-color) 50%, transparent 50%); background-size: 1200px 100%; -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
 	&:hover{
 		animation: slideBackground 0.8s $bezier;
 	}

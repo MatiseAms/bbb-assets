@@ -34,9 +34,12 @@ $minus: 0.1066;
 }
 %bbb-h5{
 	@extend %bbb-header-default; font-size: rem(14); line-height: rem((14 * 1.25)); padding-left: grid(0.5); font-weight: $font-regular; letter-spacing: letter-spacing(rem(14),-25);
+	@media #{$mobile}{
+		padding-left: grid(1);
+	}
 }
 %bbb-h6{
-	@extend %bbb-header-default; font-size: rem(10); line-height: rem(10);
+	@extend %bbb-header-default; font-size: rem(12); line-height: rem(12 * 1.25);
 }
 
 
@@ -65,7 +68,7 @@ $minus: 0.1066;
 }
 
 %bbb-p{
-	margin: 0; padding: 0; font-size: rem(16); line-height: rem(32); font-family: $bbb-second-font-family; font-weight: 400;
+	margin: 0; padding: 0; font-size: rem(16); line-height: rem(32); font-family: $bbb-body-font-family; font-weight: 400;
 	&.text-tiny{
 		font-size: rem(12);
 	}
