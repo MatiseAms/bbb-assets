@@ -1,0 +1,21 @@
+
+// Modular
+.quickviewTrigger{
+	@extend %quickview--trigger;
+	.info{
+		@extend %quickview--trigger__info;
+	}
+	.circles{
+		@extend %quickview--trigger__circles;
+
+		.ring1{
+			@extend %quickview--trigger__circles-ring1;
+		}
+		.ring2{
+			@extend %quickview--trigger__circles-ring2;
+		}
+		.icon{
+			@extend %quickview--trigger__circles-icon;
+		}
+	}
+}

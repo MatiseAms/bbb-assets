@@ -10,7 +10,6 @@
 	}
 }
 
-
 @mixin extend-icons($use: null){
 	@if $use == "button"{
 		@extend %default-button-icon;
@@ -25,6 +24,10 @@
 					@extend %default-button-icon-after;
 				}
 				content: icon($icon-name,$UI-iconset);
+			}
+
+			%icon-#{$icon-name}{
+				content: icon($icon-name,$UI-iconset); font-family: $UI-font-family; text-transform: none;
 			}
 
 			// Specific for Arrow Right

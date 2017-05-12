@@ -1,0 +1,94 @@
+%quickview{
+	$c: c($c);
+	&--trigger{
+		$trigger-size: 30; $c: c($c); cursor: pointer; position: absolute; size: rem($trigger-size); display: block; transform: translate(-50%,-50%); border-radius: 50%;
+		&__info{
+			$c: c($c); //
+			position: relative; background-color: color(Black); height: 4.5rem; line-height: 4.5rem; font-family: inherit; white-space: nowrap; padding: 0 0 0 4.5rem ; margin: -21px 0 0 -21px; border-radius: 2.25rem; z-index: 1; display: block; max-width: 4.5rem; overflow: hidden;
+		}
+		&__circles{
+			$c: c($c); position: absolute; left: 50%; top: 50%; height: 100%; width: 100%; display: block; transform: translate(-50%,-50%); z-index: 2;
+			&-ring1, &-ring2{
+				transition: $transition $bezier; display: block; border-radius: 50%; content: ""; position: absolute; left: 50%; top: 50%;
+			}
+			&-ring1{
+				$c: c($c); animation: slowPulse1 5s infinite; transform: translate(-50%,-50%) scale(1); text-align: center; line-height: rem(45); content: "a"; opacity: 0.66; size: 150%;
+			}
+			&-ring2{
+				$c: c($c); animation: slowPulse2 5s infinite; opacity: 0.33; size: 240%; transform: translate(-50%,-50%) scale(1);
+			}
+			&-icon{
+				$c: c($c); transform: scale(1);
+				&, &:before{
+					border-radius: 50%; position: absolute; top: 0; left: 0; display: block; width: 100%; height: 100%; transition: transform $transition $bezier;
+				}
+				&:before{
+					font-family: $UI-font-family; line-height: rem(31); text-align: center; font-size: rem(10); content: icon(plus,$UI-iconset); transform: scale(1);
+				}
+			}
+		}
+		&:hover{
+			$c-info: get-c("info",$c);
+			#{$c-info}{
+				border: 1px solid red;
+			}
+			$c-icon: get-c("circles-icon",$c);
+			@debug $c-icon;
+			#{$c-icon}:before{
+				content: "testhover"; transform: scale(1.5);
+			}
+		}
+		&.dark{
+			$c-circles: get-c("circles",$c);
+			#{$c-circles}{
+				&-ring1, &-ring2{
+					box-shadow: 0 0 0 2px color(Black);
+				}
+				&-icon{
+					background-color: color(Black);
+					&:before{
+						color: color(White);
+					}
+				}
+			}
+		}
+		&.grey{
+			$c-circles: get-c("circles",$c);
+			#{$c-circles}{
+				&-ring1, &-ring2{
+					box-shadow: 0 0 0 2px color(Grey);
+				}
+				&-icon{
+					background-color: color(Grey);
+					&:before{
+						color: color(White);
+					}
+				}
+			}
+		}
+		&.light{
+			$c-circles: get-c("circles",$c);
+			#{$c-circles}{
+				&-ring1, &-ring2{
+					box-shadow: 0 0 0 2px color(White);
+				}
+				&-icon{
+					background-color: color(White);
+					&:before{
+						color: color(Black);
+					}
+				}
+			}
+		}
+		@each $icon-name, $icon-value in $UI-iconset{
+			$icon-name-lowercase: to-lower-case($icon-name);
+			&.icon-#{$icon-name}, &.icon-#{$icon-name-lowercase}{
+				$c-icon: get-c("circles-icon",$c);
+				#{$c-icon}:before{
+					content: icon($icon-name,$UI-iconset);
+					@extend %icon-#{$icon-name};
+				}
+			}
+		}
+	}
+}

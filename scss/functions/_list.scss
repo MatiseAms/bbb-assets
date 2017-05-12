@@ -1,0 +1,41 @@
+// List Functions
+
+@function prepend($list, $value) {
+	@return join($value, $list);
+}
+
+@function to-string($list, $glue: '', $is-nested: false) {
+  $result: null;
+
+  @for $i from 1 through length($list) {
+    $e: nth($list, $i);
+
+    @if type-of($e) == list {
+      $result: $result#{to-string($e, $glue, true)};
+    }
+
+    @else {
+      $result: if($i != length($list) or $is-nested, $result#{$e}#{$glue}, $result#{$e});
+    }
+  }
+  $result: str-replace($result,'%',', %');
+  $result: str-replace($result,', ,',',');
+  $result: str-replace($result,' ','');
+  @return removeFirstComma($result);
+}
+@function to-list($value) {
+  @return if(type-of($value) != list, ($value,), $value);
+}
+
+@function removeFirstComma($value){
+  @if str-slice($value,0,1) == ',' {
+    $return: str-slice($value,1,999);
+/*     @if str-slice($return,0,1) == ','{
+  @return removeFirstComma($return);
+} @else { */
+      @return $return;
+  //  }
+  } @else {
+    @return $value;
+  }
+}
