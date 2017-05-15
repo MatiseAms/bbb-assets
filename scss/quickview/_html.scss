@@ -1,23 +1,23 @@
 // Modular
 .quickviewTrigger{
-	@extend %quickview--trigger;
+	@extend %bbb-quickview--trigger;
 	.info{
-		@extend %quickview--trigger__info;
+		@extend %bbb-quickview--trigger__info;
 		.text{
-			@extend %quickview--trigger__info-text;
+			@extend %bbb-quickview--trigger__info-text;
 		}
 	}
 	.circles{
-		@extend %quickview--trigger__circles;
+		@extend %bbb-quickview--trigger__circles;
 
 		.ring1{
-			@extend %quickview--trigger__circles-ring1;
+			@extend %bbb-quickview--trigger__circles-ring1;
 		}
 		.ring2{
-			@extend %quickview--trigger__circles-ring2;
+			@extend %bbb-quickview--trigger__circles-ring2;
 		}
 		.icon{
-			@extend %quickview--trigger__circles-icon;
+			@extend %bbb-quickview--trigger__circles-icon;
 		}
 	}
 }

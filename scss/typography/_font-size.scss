@@ -9,7 +9,6 @@
 $minus: 0.1066;
 %bbb-h1{
 	@extend %bbb-header-default; font-size: grid(0.75); line-height: grid((0.75 * 1.25)); font-weight: $font-bold; $spacing: (0.75 * $minus); letter-spacing: -#{$spacing}vw;
-	@debug $spacing;
 	@media #{$mobile}{
 		font-size: rem(24); line-height: rem(24 * 1.25); letter-spacing: letter-spacing(rem(24),-25);
 	}
