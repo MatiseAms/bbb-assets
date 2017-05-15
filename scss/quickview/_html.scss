@@ -1,9 +1,11 @@
-
 // Modular
 .quickviewTrigger{
 	@extend %quickview--trigger;
 	.info{
 		@extend %quickview--trigger__info;
+		.text{
+			@extend %quickview--trigger__info-text;
+		}
 	}
 	.circles{
 		@extend %quickview--trigger__circles;

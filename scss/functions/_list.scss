@@ -27,14 +27,18 @@
   @return if(type-of($value) != list, ($value,), $value);
 }
 
+@function removeComma($value){
+  @return str-replace($value,',','');
+}
+
 @function removeFirstComma($value){
   @if str-slice($value,0,1) == ',' {
-    $return: str-slice($value,1,999);
-/*     @if str-slice($return,0,1) == ','{
-  @return removeFirstComma($return);
-} @else { */
-      @return $return;
-  //  }
+    $value: str-slice($value,2,999);
+    @if str-slice($value,0,1) == ','{
+      @return removeFirstComma($value);
+    } @else {
+      @return $value;
+    }
   } @else {
     @return $value;
   }

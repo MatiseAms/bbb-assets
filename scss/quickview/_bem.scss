@@ -3,6 +3,9 @@
 	@extend %quickview--trigger;
 	&__info{
 		@extend %quickview--trigger__info;
+		&-text{
+			@extend %quickview--trigger__info-text;
+		}
 	}
 	&__circles{
 		@extend %quickview--trigger__circles;
