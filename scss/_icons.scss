@@ -4,7 +4,7 @@
 	padding-right: rem(22) !important;
 }
 %default-button-icon-after{
-	font-family: $UI-font-family; display: inline-block; margin-left: 15px; font-size: rem(16);
+	font-family: $UI-font-family; display: inline-block; margin-left: 15px; font-size: rem(16); line-height: 1rem;
 	@media #{$mobile}{
 		margin-left: 25px;
 	}
