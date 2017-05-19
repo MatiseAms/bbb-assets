@@ -1,0 +1,7 @@
+@function elementCount($end){
+	$elements: ();
+	@for $i from 1 through $end{
+		$element: "&:nth-child(#{$i}):nth-last-child(#{(($end + 1) - $i)}),"; $elements: prepend($element,$elements);
+	}
+	@return $elements;
+}

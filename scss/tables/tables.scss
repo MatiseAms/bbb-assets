@@ -1,0 +1,42 @@
+%bbb-table{
+	width: 100%; 	@extend %bbb-body-font-family; border-spacing: 0 0;
+	tr{
+		td{
+			//
+		}
+	}
+	thead{
+		position: sticky;
+		tr{
+			td{
+				font-weight: $font-bold; font-size: 1rem; padding-bottom: 1.5rem; line-height: 1rem;
+			}
+		}
+	}
+	tbody{
+		overflow: auto;
+		tr{
+			td{
+				position: relative; border-top: 2px solid color(Weblightgrey); border-right: 2px solid color(Weblightgrey); font-size: rem(14); font-weight: $font-regular; padding: rem(12) rem(20); line-height: 1rem; transition: 0.2s $bezier;
+				&:last-child{
+					border-right: 0;
+				}
+			}
+			&:hover{
+				td{
+					background-color: color(Weblightgrey);
+				}
+			}
+			&:nth-child(even){
+				td{
+					color: color(Grey); background-color: color(Weblightgrey,0.25);
+				}
+				&:hover{
+					td{
+						background-color: color(Weblightgrey);
+					}
+				}
+			}
+		}
+	}
+}

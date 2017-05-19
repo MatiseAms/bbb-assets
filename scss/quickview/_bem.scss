@@ -1,0 +1,22 @@
+// Bem
+.quickview--trigger{
+	@extend %bbb-quickview--trigger;
+	&__info{
+		@extend %bbb-quickview--trigger__info;
+		&-text{
+			@extend %bbb-quickview--trigger__info-text;
+		}
+	}
+	&__circles{
+		@extend %bbb-quickview--trigger__circles;
+		&-ring1{
+			@extend %bbb-quickview--trigger__circles-ring1;
+		}
+		&-ring2{
+			@extend %bbb-quickview--trigger__circles-ring2;
+		}
+		&-icon{
+			@extend %bbb-quickview--trigger__circles-icon;
+		}
+	}
+}

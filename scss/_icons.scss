@@ -4,12 +4,11 @@
 	padding-right: rem(22) !important;
 }
 %default-button-icon-after{
-	font-family: $UI-font-family; display: inline-block; margin-left: 15px; font-size: rem(16);
+	font-family: $UI-font-family; display: inline-block; margin-left: 15px; font-size: rem(16); line-height: 1rem;
 	@media #{$mobile}{
 		margin-left: 25px;
 	}
 }
-
 
 @mixin extend-icons($use: null){
 	@if $use == "button"{
@@ -24,7 +23,11 @@
 				@if $use == "button"{
 					@extend %default-button-icon-after;
 				}
-				content: icon($icon-name,$UI-iconset);
+				content: icon($icon-name);
+			}
+
+			%icon-#{$icon-name}{
+				content: icon($icon-name); font-family: $UI-font-family; text-transform: none;
 			}
 
 			// Specific for Arrow Right
