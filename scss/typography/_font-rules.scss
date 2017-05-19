@@ -38,6 +38,10 @@ h2, h3, h4{
 	}
 }
 
-h1+h5{
-	padding-left: 0; font-family: $bbb-price-font-family; text-transform: uppercase;
+
+
+div, p{
+	&+table, &+h1, &+h2, &+h3, &+h4, &+h5{
+		margin-top: grid(0.5);
+	}
 }

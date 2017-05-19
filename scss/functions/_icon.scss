@@ -1,5 +1,10 @@
 // Icon Function
 @function icon($value, $iconset: $icons){
-	$icon: map-get($iconset, $value);
-	@return $icon;
+	@each $iconFamily-name, $iconFamily-value in $icons{
+		@each $icon-name, $icon-value in $iconFamily-value{
+			@if $icon-name == $value{
+				@return $icon-value;
+			}
+		}
+	}
 }

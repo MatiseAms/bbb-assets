@@ -27,11 +27,13 @@
 
 
 @function grid-mq-min($columns,$width){
-	$minimum-screenwidth: $grid-design-width / ((($grid-design-width / $grid-columns) * $columns) / $width); $result: "(max-width: #{$minimum-screenwidth}px)";
+	$minimum-screenwidth: $grid-design-width / ((($grid-design-width / $grid-columns) * $columns) / $width); //
+	$result: "(max-width: #{$minimum-screenwidth}px)";
 	@return $result;
 }
 
 @function grid-mq-max($columns,$width){
-	$minimum-screenwidth: $grid-design-width / ((($grid-design-width / $grid-columns) * $columns) / $width); $result: "(min-width: #{$minimum-screenwidth}px)";
+	$minimum-screenwidth: $grid-design-width / ((($grid-design-width / $grid-columns) * $columns) / $width); //
+	$result: "(min-width: #{$minimum-screenwidth}px)";
 	@return $result;
 }

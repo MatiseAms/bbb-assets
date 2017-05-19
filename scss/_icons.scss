@@ -23,11 +23,11 @@
 				@if $use == "button"{
 					@extend %default-button-icon-after;
 				}
-				content: icon($icon-name,$UI-iconset);
+				content: icon($icon-name);
 			}
 
 			%icon-#{$icon-name}{
-				content: icon($icon-name,$UI-iconset); font-family: $UI-font-family; text-transform: none;
+				content: icon($icon-name); font-family: $UI-font-family; text-transform: none;
 			}
 
 			// Specific for Arrow Right
