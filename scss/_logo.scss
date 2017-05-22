@@ -2,7 +2,6 @@ $bbb-logo-variations: ("web","simple","full","square","mark","partofyourride-por
 
 %bbb-logo{
 	@each $variation in $bbb-logo-variations{
-		@debug $variation;
 		&-#{$variation}{
 			&{
 				background-position: center center; background-repeat: no-repeat; background-size: contain; background-image: url("#{$bbb-image-path}/bbb-logo-#{$variation}.svg");

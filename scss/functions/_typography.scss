@@ -1,7 +1,4 @@
 @function letter-spacing($font-size: rem($bbb-font-size),$space: $bbb-letter-spacing){
-	@if $font-size > 10{
-		@debug "Give size in Rem";
-	}
 	$size: (($font-size*$bbb-font-size)*$space)/1000;
 	@return rem($size);
 }
