@@ -20,7 +20,7 @@ h6{
 
 // make font styles
 .font-bold, strong{
-	@extend %bbb-bold;
+	@extend %bbb-font-bold !optional;
 }
 small{
 	@extend %bbb-small;
