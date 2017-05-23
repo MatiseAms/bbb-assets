@@ -1,11 +1,11 @@
 
 
-/* Default use:
-  @include min-(width,4,240);
+// Default use:
+//  @include min-(width,4,240);
 
-  use width calculation
-  @include min-(width,4,240,'calc(100% - 240px)');
-*/
+//  use width calculation
+//  @include min-(width,4,240,'calc(100% - 240px)');
+
 
 @mixin min-($what,$columns,$min-width,$alt: false){
   $mq: grid-mq-min($columns,$min-width);
@@ -21,7 +21,7 @@
 
 
 
-/* Just making is simpler to understand */
+// Just making is simpler to understand
 
 @mixin min-width($columns,$min-width,$alt: false){
   @include min-('width',$columns,$min-width,$alt){
@@ -79,7 +79,7 @@
 
 
 
-/* Just making is simpler to understand */
+// Just making is simpler to understand
 
 @mixin max-width($columns,$min-width,$alt: false){
   @include max-('width',$columns,$min-width,$alt){
