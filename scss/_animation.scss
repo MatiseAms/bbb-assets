@@ -140,3 +140,15 @@
 		opacity: 1; transform: translateX(0%);
 	}
 }
+
+%bbb-bottomline-animation{
+	position: relative;
+	&:before{
+		content: ""; width: 100%; height: 2px; position: absolute; bottom: 0.5rem; left: 0; opacity: 0; background-position: 50% 0; background-size: 300% 100%; animation: flowOut $transition $bezier; background-image: linear-gradient(to left, transparent 33.33%, color(Black) 33.33%, color(Black) 66.66%, transparent 66.66%); transition: background-position 0.3s;
+	}
+	&:hover{
+		&:before{
+			animation: flowIn $transition $bezier forwards;
+		}
+	}
+}

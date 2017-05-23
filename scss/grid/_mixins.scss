@@ -29,6 +29,11 @@
   }
 }
 
+@mixin min-height($columns,$min-width,$alt: false){
+  @include min-('height',$columns,$min-width,$alt){
+      @content;
+  }
+}
 @mixin min-left($columns,$min-width,$alt: false){
   @include min-('left',$columns,$min-width,$alt){
       @content;
@@ -42,6 +47,11 @@
 }
 @mixin min-fontsize($columns,$min-width,$alt: false){
   @include min-('font-size',$columns,$min-width,$alt){
+    @content;
+  }
+}
+@mixin min-line-height($columns,$min-width,$alt: false){
+  @include min-('line-height',$columns,$min-width,$alt){
     @content;
   }
 }
@@ -76,6 +86,11 @@
     @content;
   }
 }
+@mixin max-height($columns,$min-width,$alt: false){
+  @include max-('height',$columns,$min-width,$alt){
+    @content;
+  }
+}
 
 @mixin max-left($columns,$min-width,$alt: false){
   @include max-('left',$columns,$min-width,$alt){
@@ -91,6 +106,11 @@
 
 @mixin max-fontsize($columns,$min-width,$alt: false){
   @include max-('font-size',$columns,$min-width,$alt){
+    @content;
+  }
+}
+@mixin max-line-height($columns,$min-width,$alt: false){
+  @include max-('line-height',$columns,$min-width,$alt){
     @content;
   }
 }

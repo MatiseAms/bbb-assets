@@ -1,0 +1,33 @@
+%bbb-breadcrumb{
+	$c: c($c);
+	&--list{
+		$c: c($c); white-space: nowrap; font-size: 0rem; height: grid(0.75);
+		&__item{
+			$c: c($c); display: inline-block;
+			&:after{
+				color: color(Lightgrey);@extend %bbb-main-font-family; font-size: rem(14); display: inline-block; content: "/"; padding: 0rem 0.5rem;
+			}
+			&-link{
+				cursor: pointer; $c: c($c); display: inline-block; padding: 0 0;
+				@extend %bbb-bottomline-animation;
+			}
+			&-text{
+				$c: c($c); color: color(Lightgrey); line-height: grid(0.75);
+				@extend %bbb-main-font-family; font-size: rem(14); display: block;
+				@include min-line-height(0.75,32);
+			}
+			&:first-child{
+				padding-left: 0;
+			}
+			&:last-child{
+				$c-text: get-c("item-text",$c);
+				#{$c-text}{
+					color: color(Black);
+				}
+				&:after{
+					background-color: blue; font-size: 5rem; content: none !important;
+				}
+			}
+		}
+	}
+}

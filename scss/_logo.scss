@@ -1,0 +1,65 @@
+$bbb-logo-variations: ("web","simple","full","square","mark","partofyourride-portrait","partofyourride-landscape","partofyourride-combi");
+
+%bbb-logo{
+	@each $variation in $bbb-logo-variations{
+		&-#{$variation}{
+			&{
+				background-position: center center; background-repeat: no-repeat; background-size: contain; background-image: url("#{$bbb-image-path}/bbb-logo-#{$variation}.svg");
+				@if $variation == "web"{
+					min-width: 100px; min-height: 60px; max-width: 100px; max-height: 60px;
+				}
+			}
+			&-dark{
+				background-position: center center; background-repeat: no-repeat; background-size: contain; background-image: url("#{$bbb-image-path}/bbb-logo-#{$variation}-dark.svg");
+				@if $variation == "web"{
+					min-width: 100px; min-height: 60px; max-width: 100px; max-height: 60px;
+				}
+			}
+
+			&-black{
+				background-position: center center; background-repeat: no-repeat; background-size: contain; background-image: url("#{$bbb-image-path}/bbb-logo-#{$variation}-black.svg");
+				@if $variation == "web"{
+					min-width: 100px; min-height: 60px; max-width: 100px; max-height: 60px;
+				}
+			}
+		}
+	}
+}
+
+%default-logo{
+	width: 200px; height: 200px; display: inline-block;
+}
+.bbb-logo{
+	@each $variation in $bbb-logo-variations{
+		&-#{$variation}{
+			&{
+				@extend %default-logo;
+				@extend %bbb-logo-#{$variation};
+			}
+			&-dark{
+				@extend %default-logo;
+				@extend %bbb-logo-#{$variation}-dark;
+			}
+			&-black{
+				@extend %default-logo;
+				@extend %bbb-logo-#{$variation}-black;
+			}
+		}
+	}
+}
+
+%bbb-logo-combi{
+	font-size: 0rem;
+	&:before{
+		content: ""; display: inline-block; width: 60px; height: 60px; border-right: 2px solid color(Black);
+		@extend %bbb-logo-mark-black;
+	}
+	&:after{
+		content: ""; display: inline-block; width: 153px; height: 60px;
+		@extend %bbb-logo-partofyourride-landscape; margin: 0 20px;
+	}
+}
+
+.bbb-logo-combi{
+	@extend %bbb-logo-combi;
+}
