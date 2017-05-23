@@ -49,3 +49,20 @@ $grid-parts: (
 %reset{
 	-webkit-appearance: none; outline: none; box-sizing: border-box; -webkit-overflow-scrolling: touch; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; -webkit-backface-visibility: hidden;
 }
+
+
+*{
+	-webkit-appearance: none; outline: none; outline: none; box-sizing: border-box; -webkit-overflow-scrolling: touch; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; -webkit-backface-visibility: hidden;
+	&:focus{
+		outline: none;
+	}
+	&:invalid{
+		box-shadow: none;
+	}
+	&:-moz-submit-invalid{
+		box-shadow: none;
+	}
+	&:-moz-ui-invalid{
+		box-shadow: none;
+	}
+}
