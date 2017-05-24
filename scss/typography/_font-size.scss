@@ -49,7 +49,10 @@ $minus: 0.1066;
 
 // make font styles
 
-%bbb-bold{
+%bbb-font-regular{
+	font-weight: $font-regular;
+}
+%bbb-font-bold{
 	font-weight: $font-bold;
 }
 %bbb-small{
