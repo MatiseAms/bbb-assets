@@ -141,6 +141,23 @@
 	}
 }
 
+@include keyframes(selectorIn){
+	0%{
+		max-width: 0;
+	}
+	100%{
+		max-width: 320px;
+	}
+}
+@include keyframes(selectorInItem){
+	0%{
+		opacity: 0; transform: translateX(-100px);
+	}
+	100%{
+		opacity: 1; transform: translateX(0);
+	}
+}
+
 %bbb-bottomline-animation{
 	position: relative;
 	&:before{
