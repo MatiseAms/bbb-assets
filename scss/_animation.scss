@@ -209,15 +209,75 @@
 		background-color: color(Webmidgrey);
 	}
 }
+// Navigation
 
-%bbb-bottomline-animation{
+
+@include keyframes(fadeIn){
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}
+@include keyframes(flowIn){
+	from{
+		background-position: 100% 0;
+	}
+	to{
+		background-position: 50% 0; opacity: 1;
+	}
+}
+
+@include keyframes(flowOut){
+	from{
+		background-position: 50% 0; opacity: 1;
+	}
+	to{
+		background-position: 0 0; opacity: 1;
+	}
+}
+@include keyframes(navSlideIn){
+	from{
+		transform: translateX(-100px); opacity: 0;
+	}
+	to{
+		transform: translateX(0); opacity: 1;
+	}
+}
+@include keyframes(navSlideOut){
+	from{
+		transform: translateX(0); opacity: 1;
+	}
+	to{
+		transform: translateX(100px); opacity: 0;
+	}
+}
+
+// Bottom line
+
+@mixin bottom-line($color: color(Black), $height: 2px, $bottom: 0.5rem, $insert: false){
 	position: relative;
 	&:before{
-		content: ""; width: 100%; height: 2px; position: absolute; bottom: 0.5rem; left: 0; opacity: 0; background-position: 50% 0; background-size: 300% 100%; animation: flowOut $transition $bezier; background-image: linear-gradient(to left, transparent 33.33%, color(Black) 33.33%, color(Black) 66.66%, transparent 66.66%); transition: background-position 0.3s;
+		content: ""; width: 100%; height: $height; position: absolute; bottom: $bottom; left: 0; opacity: 0; background-position: 50% 0; background-size: 300% 100%; animation: flowOut default("transition") default("bezier"); background-image: linear-gradient(to left, transparent 33.33%, $color 33.33%, $color 66.66%, transparent 66.66%); transition: background-position 0.3s;
 	}
 	&:hover{
 		&:before{
-			animation: flowIn $transition $bezier forwards;
+			animation: flowIn default("transition") default("bezier") forwards;
 		}
 	}
+	@if $insert{
+		&:before{
+			animation: flowIn default("transition") default("bezier"); opacity: 1; background-image: linear-gradient(to left, $color 33.33%, transparent 33.33%, transparent 66.66%, $color 66.66%);
+		}
+		&:hover{
+			&:before{
+				animation: flowOut default("transition") default("bezier") forwards;
+			}
+		}
+	}
+}
+
+%bbb-bottomline-animation{
+	@include bottom-line();
 }

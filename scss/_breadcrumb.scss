@@ -1,4 +1,5 @@
-%bbb-breadcrumb{
+$extending-class-breadcrumb: "%#{$pre}-breadcrumb";
+#{$extending-class-breadcrumb}{
 	$c: c($c);
 	&--list{
 		$c: c($c); white-space: nowrap; font-size: 0rem; height: grid(0.75);

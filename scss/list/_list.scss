@@ -1,0 +1,39 @@
+$extending-class: "%#{$pre}-list";
+#{$extending-class}{
+	margin: 0; padding: 0;
+	li{
+		position: relative; margin: 0; padding: 0; padding-left: 40px; display: block; $ext-p: "%#{$pre}-p";
+		@extend #{$ext-p};
+		&:before{
+			position: absolute; left: 0; width: 20px;
+		}
+	}
+}
+
+$ext-class: "%#{$pre}-unordered-list";
+#{$ext-class}{
+	$ext: "%#{$pre}-list";
+	@extend #{$ext};
+	li{
+		&:before{
+			content: ""; background-color: color(Black); top: 50%; height: 2px;
+		}
+	}
+}
+$ext-class: "%#{$pre}-ordered-list";
+#{$ext-class}{
+	counter-reset: list; $ext: "%#{$pre}-list";
+	@extend #{$ext};
+	li{
+		counter-increment: list;
+		&:before{
+			font-weight: bold; width: 20px; text-align: right; content: counter(list);
+		}
+	}
+}
+.content ul{
+	@extend %bbb-unordered-list;
+}
+.content ol{
+	@extend %bbb-ordered-list;
+}
