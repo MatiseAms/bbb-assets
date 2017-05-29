@@ -55,8 +55,7 @@
 			//opacity: 0; transform: translateX(-200px);
 			@for $i from 1 through 10{
 				li:nth-child(#{$i}){
-					opacity: 0; transform: translateX(-100px); $delay: ($i * 0.1) + 0.1;
-					@debug $delay; animation: selectorInItem 0.2s #{$delay}s forwards;
+					opacity: 0; transform: translateX(-100px); $delay: ($i * 0.1) + 0.1; animation: selectorInItem 0.2s #{$delay}s forwards;
 				}
 			}
 		}
