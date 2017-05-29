@@ -56,6 +56,8 @@
 	}
 }
 
+/* Quickview Animations */
+
 @include keyframes(quickviewRing1){
 	0%{
 		transform: translate(-50%,-50%) scale(0.66); opacity: 0.22;
@@ -141,6 +143,8 @@
 	}
 }
 
+/* Selector Animations */
+
 @include keyframes(selectorIn){
 	0%{
 		max-width: 0;
@@ -155,6 +159,54 @@
 	}
 	100%{
 		opacity: 1; transform: translateX(0);
+	}
+}
+
+/* Toggle Switch Animations */
+
+@include keyframes(switchToggleLeft){
+	0%{
+		background-color: color(Webmidgrey);
+	}
+	50%{
+		background-color: color(Weblightgrey);
+	}
+	100%{
+		background-color: color(Webmidgrey);
+	}
+}
+@include keyframes(switchToggleRight){
+	0%{
+		background-color: color(Webmidgrey);
+	}
+	50%{
+		background-color: color(Weblightgrey);
+	}
+	100%{
+		background-color: color(Webmidgrey);
+	}
+}
+
+@include keyframes(switchToggleOn){
+	0%{
+		background-color: color(Webmidgrey);
+	}
+	50%{
+		background-color: color(Green);
+	}
+	100%{
+		background-color: color(Webmidgrey);
+	}
+}
+@include keyframes(switchToggleOff){
+	0%{
+		background-color: color(Webmidgrey);
+	}
+	50%{
+		background-color: color(Red);
+	}
+	100%{
+		background-color: color(Webmidgrey);
 	}
 }
 
