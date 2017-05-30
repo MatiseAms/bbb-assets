@@ -10,7 +10,7 @@ $extending-class-breadcrumb: "%#{$pre}-breadcrumb";
 			}
 			&-link{
 				cursor: pointer; $c: c($c); display: inline-block; padding: 0 0;
-				@extend %bbb-bottomline-animation;
+				@include bottom-line(color(Black),2px,4px);
 			}
 			&-text{
 				$c: c($c); color: color(Lightgrey); line-height: grid(0.75);

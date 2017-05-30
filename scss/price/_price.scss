@@ -1,0 +1,72 @@
+$currency: (
+  "usd" : "$",
+  "euro" : "€",
+  "eypo" : "€",
+  "dollar" : "$",
+  "pound" : "£",
+  "pond" : "£",
+  "uk" : "£",
+  "e" : "$",
+);
+@mixin addCurrency(){
+	@each $cur-name, $cur-value in $currency{
+		&[data-currency="#{$cur-name}"]:before{
+			content: "#{$cur-value}";
+		}
+		&.with-slash[data-currency="#{$cur-name}"]:before{
+			content: "/ #{$cur-value}";
+		}
+	}
+}
+
+
+.price{
+	@extend #{$ext-price-font-family}; font-size: rem(20);
+
+	&:after{
+		line-height: rem(15); margin-left: 3px; position: relative; top: -2px; border-bottom: 1px solid black; display: inline-block; font-size: 1rem; content: "00";
+		/* 		@media #{$mobile}{
+  position: static; line-height: inherit; font-size: inherit; border: none; display: inline;
+} */
+	}
+	&.large{
+		font-size: rem(40);
+		@media #{$mobile}{
+			font-size: rem(24);
+		}
+		&:after{
+			font-size: 2rem; line-height: 2.1rem; top: -6px;
+			@media #{$mobile}{
+				font-size: rem(19); line-height: 1.3rem; top: -3px;
+			}
+		}
+	}
+	@for $i from 1 through 99{
+		@if($i < 10){
+			&[data-fraction="0#{$i}"], &[data-fraction="#{$i}"]{
+				&:after{
+					content: "0#{$i}";
+				}
+			}
+		} @else{
+			&[data-fraction="#{$i}"]{
+				&:after{
+					content: "#{$i}";
+				}
+			}
+		}
+	}
+	&:before{
+		margin-right: 4px;
+	}
+	&.with-slash:before{
+		content: "/ ";
+	}
+	&[data-currency]:before{
+		content: attr(data-currency);
+	}
+	&.with-slash[data-currency]:before{
+		content: "/ " attr(data-currency);
+	}
+	@include addCurrency();
+}

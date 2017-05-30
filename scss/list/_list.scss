@@ -31,9 +31,3 @@ $ext-class: "%#{$pre}-ordered-list";
 		}
 	}
 }
-.content ul{
-	@extend %bbb-unordered-list;
-}
-.content ol{
-	@extend %bbb-ordered-list;
-}
