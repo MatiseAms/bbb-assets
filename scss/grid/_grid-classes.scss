@@ -3,8 +3,8 @@
 	@if $child == true{
 		$childClass: " .column";
 	}
-	@for $a from 0 through $grid-columns{
-		$percentage: percentage($a/$grid-columns); $column: #{$a}#{$childClass};
+	@for $a from 0 through default("grid-columns"){
+		$percentage: percentage($a/default("grid-columns")); $column: #{$a}#{$childClass};
 		&.column-#{$column}{
 			width: #{$percentage};
 		}
@@ -21,9 +21,11 @@
 
 
 	$min-width: 0;
-	@each $bp-name,$bp-value in $grid-breakpoints{
-		$mq-only: "#{$grid-screen} and (min-width: #{$min-width}px) and (max-width: #{$bp-value}px)"; $mq: "#{$grid-screen} and (min-width: #{$min-width}px)"; $min-width: $bp-value + 1;
-		@each $part,$percentage in $grid-parts{
+	@each $bp-name,$bp-value in default("grid-breakpoints"){
+		$grid-screen: default("grid-screen"); //
+		$mq-only: "#{$grid-screen} and (min-width: #{$min-width}px) and (max-width: #{$bp-value}px)"; //
+		$mq: "#{$grid-screen} and (min-width: #{$min-width}px)"; $min-width: $bp-value + 1; //
+		@each $part,$percentage in default("grid-parts"){
 			&.#{$part}#{$childClass}{
 				width: percentage($percentage);
 			}
@@ -32,13 +34,13 @@
 			&.#{$bp-name}-only-0#{$childClass}{
 				width: 0; display: none;
 			}
-			@each $part,$percentage in $grid-parts{
+			@each $part,$percentage in default("grid-parts"){
 				&.#{$bp-name}-only-#{$part}#{$childClass}{
 					width: percentage($percentage);
 				}
 			}
-			@for $a from 1 through $grid-columns{
-				$percentage: percentage($a/$grid-columns);
+			@for $a from 1 through default("grid-columns"){
+				$percentage: percentage($a/default("grid-columns"));
 				&.#{$bp-name}-only-#{$a}#{$childClass}{
 					width: $percentage;
 				}
@@ -57,13 +59,13 @@
 			&.#{$bp-name}-0#{$childClass}{
 				width: 0; display: none;
 			}
-			@each $part,$percentage in $grid-parts{
+			@each $part,$percentage in default("grid-parts"){
 				&.#{$bp-name}-#{$part}#{$childClass}{
 					width: percentage($percentage);
 				}
 			}
-			@for $a from 1 through $grid-columns{
-				$percentage: percentage($a/$grid-columns);
+			@for $a from 1 through default("grid-columns"){
+				$percentage: percentage($a/default("grid-columns"));
 
 				&.#{$bp-name}-#{$a}#{$childClass}{
 					width: $percentage;
@@ -84,7 +86,7 @@
 
 
 .row{
-	max-width: $grid-row-width; width: 100%; margin: auto; display: flex; justify-content: flex-start; flex-flow: row wrap; @include createGridClasses(true);
+	max-width: default(grid-row-width); width: 100%; margin: auto; display: flex; justify-content: flex-start; flex-flow: row wrap; @include createGridClasses(true);
 	&.center{
 		justify-content: center;
 	}

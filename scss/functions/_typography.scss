@@ -1,4 +1,4 @@
-@function letter-spacing($font-size: rem($bbb-font-size),$space: $bbb-letter-spacing){
-	$size: (($font-size*$bbb-font-size)*$space)/1000;
+@function letter-spacing($font-size: rem(default("font-size")),$space: default("font-letter-spacing")){
+	$size: (($font-size*default("font-size"))*$space)/1000;
 	@return rem($size);
 }

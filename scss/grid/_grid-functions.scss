@@ -1,15 +1,15 @@
 @function grid($v,$min: 0){
-	$value: (100/$grid-columns)*$v;
+	$value: (100/default("grid-columns"))*$v;
 	@if $value < $min{
 		$value: $min;
 	}
 	//convert px to vw based on design file
 	@if unit($v) == "px"{
-		$value: (strip-unit($v)*100)/strip-unit($grid-design-width);
+		$value: (strip-unit($v)*100)/strip-unit(default("grid-design-width"));
 	}
 	//convert rem to vw based on design file
 	@if unit($v) == "rem"{
-		$value: ((strip-unit($v)*$base-font-size)*100)/strip-unit($grid-design-width);
+		$value: ((strip-unit($v)*default("font-size"))*100)/strip-unit(default("grid-design-width"));
 	}
 	@return unquote("#{$value}vw");
 }
@@ -27,13 +27,13 @@
 
 
 @function grid-mq-min($columns,$width){
-	$minimum-screenwidth: $grid-design-width / ((($grid-design-width / $grid-columns) * $columns) / $width); //
+	$minimum-screenwidth: default("grid-design-width") / (((default("grid-design-width") / default("grid-columns")) * $columns) / $width); //
 	$result: "(max-width: #{$minimum-screenwidth}px)";
 	@return $result;
 }
 
 @function grid-mq-max($columns,$width){
-	$minimum-screenwidth: $grid-design-width / ((($grid-design-width / $grid-columns) * $columns) / $width); //
+	$minimum-screenwidth: default("grid-design-width") / (((default("grid-design-width") / default("grid-columns")) * $columns) / $width); //
 	$result: "(min-width: #{$minimum-screenwidth}px)";
 	@return $result;
 }

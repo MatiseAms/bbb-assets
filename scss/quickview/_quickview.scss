@@ -1,4 +1,5 @@
-%bbb-quickview{
+$extending-class: "%#{$pre}-quickview";
+#{$extending-class}{
 	$c: c($c);
 	&--trigger{
 		$c: c($c); z-index: 6; $trigger-size: 30; $c: c($c); cursor: pointer; position: absolute; size: rem($trigger-size); display: block; transform: translate(-50%,-50%); border-radius: 50%;
@@ -7,7 +8,8 @@
 		}
 		&__info{
 			$c: c($c); //
-			content: "text-of-info2"; left: 0; top: 0; position: absolute; background-color: color(Black); height: 4.75rem; line-height: 4.75rem; padding: 0 0 0 4.75rem ; margin: -23px 0 0 -23px; border-radius: 2.375rem; z-index: 1; display: inline-block; max-width: 3rem; transform: scale(0); overflow: hidden; @extend %bbb-p; color: color(White);
+			left: 0; top: 0; position: absolute; background-color: color(Black); height: 4.75rem; line-height: 4.75rem; padding: 0 0 0 4.75rem ; margin: -23px 0 0 -23px; border-radius: 2.375rem; z-index: 1; display: inline-block; max-width: 3rem; transform: scale(0); overflow: hidden; color: color(White); $ext: "%#{$pre}-p";
+			@extend #{$ext};
 			&-text{
 				$c: c($c); //
 				opacity: 0; transform: translateX(50%); width: auto; display: inline-block; font-family: inherit; white-space: nowrap; padding: 0 2rem 0 1rem;
@@ -16,7 +18,7 @@
 		&__circles{
 			$c: c($c); position: absolute; left: 50%; top: 50%; height: 100%; width: 100%; display: block; transform: translate(-50%,-50%); z-index: 4;
 			&-ring1, &-ring2{
-				transition: $transition $bezier; display: block; border-radius: 50%; content: ""; position: absolute; left: 50%; top: 50%; z-index: 5;
+				transition: default("transition") default("bezier"); display: block; border-radius: 50%; content: ""; position: absolute; left: 50%; top: 50%; z-index: 5;
 			}
 			&-ring1{
 				$c: c($c); animation: quickviewRing1 5s infinite; transform: translate(-50%,-50%) scale(1); text-align: center; line-height: rem(45); content: "a"; opacity: 0.66; size: 170%;
@@ -27,7 +29,7 @@
 			&-icon{
 				$c: c($c); transform: scale(1); z-index: 2; position: relative; box-shadow: 0 0 1.5rem 0 color(Black,0.5);
 				&, &:before{
-					border-radius: 50%; position: absolute; top: 0; left: 0; display: block; width: 100%; height: 100%; transition: transform $transition $bezier;
+					border-radius: 50%; position: absolute; top: 0; left: 0; display: block; width: 100%; height: 100%; transition: transform default("transition") default("bezier");
 				}
 				&:before{
 					font-family: $UI-font-family; line-height: rem(26); text-align: center; font-size: rem(16); content: icon(plus,$UI-iconset); transform: scale(1); letter-spacing: -7px;
@@ -60,11 +62,11 @@
 			}
 			// Hover on info
 			#{$c-info}{
-				animation: quickviewInfo 0.8s $bezier forwards;
+				animation: quickviewInfo 0.8s default("bezier") forwards;
 			}
 			// Hover on info
 			#{$c-info-text}{
-				max-width: 999px; animation: quickviewInfoText $transition 0.75s $bezier forwards;
+				max-width: 999px; animation: quickviewInfoText default("transition") 0.75s default("bezier") forwards;
 			}
 			// Hover on Icon;
 			#{$c-icon}{
@@ -72,10 +74,10 @@
 			}
 			// Hover on Icon;
 			#{$c-ring1}{
-				animation: quickviewHoverRing1 1s $bezier forwards;
+				animation: quickviewHoverRing1 1s default("bezier") forwards;
 			}
 			#{$c-ring2}{
-				animation: quickviewHoverRing2 1s $bezier forwards;
+				animation: quickviewHoverRing2 1s default("bezier") forwards;
 			}
 		}
 
@@ -245,9 +247,10 @@
 	}
 }
 
-
-%bbb-quickview-button{
-	@extend %button-dark-naked; padding-right: 72px; position: relative; overflow: visible;
+$extending-class-qb: "%#{$pre}-quickview-button";
+#{$extending-class-qb}{
+	$ext: "%#{$pre}-button-dark-naked";
+	@extend #{$ext}; padding-right: 72px; position: relative; overflow: visible;
 	span{
 		position: absolute; right: 0; top: 50%;
 	}

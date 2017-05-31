@@ -64,7 +64,7 @@
 				}
 				&:hover{
 					&:after{
-						animation: bumpIn 0.4s 1s $bezier forwards;
+						animation: bumpIn 0.4s 1s default("bezier") forwards;
 					}
 				}
 			}

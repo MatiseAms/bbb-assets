@@ -1,43 +1,56 @@
 h1{
-	@extend %bbb-h1;
+	$ext: "%#{$pre}-h1";
+	@extend #{$ext};
 }
 h2{
-	@extend %bbb-h2;
+	$ext: "%#{$pre}-h2";
+	@extend #{$ext};
 }
 h3{
-	@extend %bbb-h3;
+	$ext: "%#{$pre}-h3";
+	@extend #{$ext};
 }
 h4{
-	@extend %bbb-h4;
+	$ext: "%#{$pre}-h4";
+	@extend #{$ext};
 }
 h5{
-	@extend %bbb-h5;
+	$ext: "%#{$pre}-h5";
+	@extend #{$ext};
 }
 h6{
-	@extend %bbb-h6;
+	$ext: "%#{$pre}-h6";
+	@extend #{$ext};
 }
 
 
 // make font styles
 .font-bold, strong{
-	@extend %bbb-font-bold !optional;
+	$ext: "%#{$pre}-font-bold";
+	@extend #{$ext};
 }
 small{
-	@extend %bbb-small;
+	$ext: "%#{$pre}-small";
+	@extend #{$ext};
 }
 del{
-	@extend %bbb-del;
+	$ext: "%#{$pre}-del";
+	@extend #{$ext};
 }
 ins{
-	@extend %bbb-ins;
+	$ext: "%#{$pre}-ins";
+	@extend #{$ext};
 }
 sub{
-	@extend	%bbb-sub;
+	$ext: "%#{$pre}-sub";
+	@extend #{$ext};
 }
 sup{
-	@extend	%bbb-sup;
+	$ext: "%#{$pre}-sup";
+	@extend #{$ext};
 }
 
 p{
-	@extend %bbb-p;
+	$ext: "%#{$pre}-p";
+	@extend #{$ext};
 }

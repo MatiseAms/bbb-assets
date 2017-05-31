@@ -1,4 +1,5 @@
-%bbb-breadcrumb{
+$extending-class-breadcrumb: "%#{$pre}-breadcrumb";
+#{$extending-class-breadcrumb}{
 	$c: c($c);
 	&--list{
 		$c: c($c); white-space: nowrap; font-size: 0rem; height: grid(0.75);
@@ -9,7 +10,7 @@
 			}
 			&-link{
 				cursor: pointer; $c: c($c); display: inline-block; padding: 0 0;
-				@extend %bbb-bottomline-animation;
+				@include bottom-line(color(Black),2px,4px);
 			}
 			&-text{
 				$c: c($c); color: color(Lightgrey); line-height: grid(0.75);
