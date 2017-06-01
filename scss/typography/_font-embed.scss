@@ -1,54 +1,54 @@
-$assets-main-font-weights: (
+$bbb-main-font-weights: (
 	"Medium": 500,
 	"SemiBold": 600
 ); //
 //
-$font-thin: map-get($assets-main-font-weights,Medium); //
-$font-light: map-get($assets-main-font-weights,Medium); //
-$font-regular: map-get($assets-main-font-weights,Medium); //
-$font-medium: map-get($assets-main-font-weights,Medium); //
-$font-semibold: map-get($assets-main-font-weights,SemiBold); //
-$font-bold: map-get($assets-main-font-weights,SemiBold); //
-$font-black: map-get($assets-main-font-weights,SemiBold); //
+$font-thin: map-get($bbb-main-font-weights,Medium); //
+$font-light: map-get($bbb-main-font-weights,Medium); //
+$font-regular: map-get($bbb-main-font-weights,Medium); //
+$font-medium: map-get($bbb-main-font-weights,Medium); //
+$font-semibold: map-get($bbb-main-font-weights,SemiBold); //
+$font-bold: map-get($bbb-main-font-weights,SemiBold); //
+$font-black: map-get($bbb-main-font-weights,SemiBold); //
 
 // Base font
 /*
 	Use font-include for single fonts
 	and font-list for a list using the $*-font-weights list
 */
-$assets-main-font: "Montserrat"; //
-$assets-main-font-name: "Montserrat-"; //
-$assets-main-font-family: #{$assets-main-font},sans-serif; //
+$bbb-main-font: "Montserrat"; //
+$bbb-main-font-name: "Montserrat-"; //
+$bbb-main-font-family: #{$bbb-main-font},sans-serif; //
 // include main font
-@include font-list($assets-main-font,$assets-main-font-name,$assets-main-font-weights,normal); //
+@include font-list($bbb-main-font,$bbb-main-font-name,$bbb-main-font-weights,normal); //
 //
 $ext-main-font-family: "%#{$pre}-main-font-family";
 #{$ext-main-font-family}{
-	font-family: $assets-main-font-family;
+	font-family: $bbb-main-font-family;
 }
 //
-$assets-body-font: "Avenir"; //
-$assets-body-font-name: "Avenir-Medium"; //
-$assets-body-font-family: #{$assets-body-font},sans-serif; //
+$bbb-body-font: "Avenir"; //
+$bbb-body-font-name: "Avenir-Medium"; //
+$bbb-body-font-family: #{$bbb-body-font},sans-serif; //
 // include main font
-//@include font-list($second-font,$second-font-name,$assets-main-font-weights,normal);
-@include font-include($assets-body-font,$assets-body-font-name,normal,normal);//
+//@include font-list($second-font,$second-font-name,$bbb-main-font-weights,normal);
+@include font-include($bbb-body-font,$bbb-body-font-name,normal,normal);//
 //
 $ext-body-font-family: "%#{$pre}-body-font-family";
 #{$ext-body-font-family}{
-	font-family: $assets-body-font-family; font-weight: normal;
+	font-family: $bbb-body-font-family; font-weight: normal;
 }
 //
-$assets-price-font: "RobotoCondensed-Regular"; //
-$assets-price-font-name: "RobotoCondensed-Regular"; //
-$assets-price-font-family: #{$assets-price-font},sans-serif; //
+$bbb-price-font: "RobotoCondensed-Regular"; //
+$bbb-price-font-name: "RobotoCondensed-Regular"; //
+$bbb-price-font-family: #{$bbb-price-font},sans-serif; //
 // include main font
-@include font-include($assets-price-font,$assets-price-font-name,normal,normal);
+@include font-include($bbb-price-font,$bbb-price-font-name,normal,normal);
 
 .bbb-price-font-family, %bbb-price-font-family{
-	font-family: $assets-price-font-family; text-transform: uppercase; letter-spacing: letter-spacing(1rem,-25);
+	font-family: $bbb-price-font-family; text-transform: uppercase; letter-spacing: letter-spacing(1rem,-25);
 }
 $ext-price-font-family: "%#{$pre}-price-font-family";
 #{$ext-price-font-family}{
-	font-family: $assets-price-font-family; font-weight: normal; text-transform: none;
+	font-family: $bbb-price-font-family; font-weight: normal; text-transform: none;
 }
