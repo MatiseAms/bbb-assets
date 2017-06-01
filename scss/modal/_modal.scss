@@ -1,0 +1,48 @@
+$extending-class: "%#{$pre}-modal";
+#{$extending-class}{
+	overflow: scroll; position: fixed; width: 100vw; height: 100vh; background-color: color(Black,0); left: 0; top: -100vh; z-index: 15;
+
+	&-content{
+		display: inline-flex; position: relative; width: 100%; padding: 0 grid(0.75); @include calc("top", "60px + #{$grid-150}");
+		.column{
+			flex-basis: 0; flex-grow: 1;
+			.content{
+				opacity: 0; overflow: hidden; margin: 0 grid(0.25); background-color: color(White); background-color: white; padding: grid(0.5); transform: translateX(-100%) scale(0,1);
+			}
+		}
+	}
+	&.active{
+		top: 0; background-color: color(Black,0.8); transition: background-color 0.5s;
+		>div{
+			.column{
+				@for $i from 1 through 10{
+					&:nth-child(#{$i}){
+						.content{
+							$delay: $i * 0.3; transition: transform 0.5s #{$delay}s default("bezier"), opacity 0.5s #{$delay}s default("bezier");
+						}
+					}
+				}
+				.content{
+					transform: translateX(0%) scale(1,1); opacity: 1;
+				}
+			}
+		}
+	}
+	&-close{
+		position: fixed; right: $grid-1; top: $grid-075; z-index: 1000; animation: slideInLeft 0.3s  default("bezier"); //
+		$ext-button-dark: "%#{$pre}-button-dark"; //
+		@extend #{$ext-button-dark}; //
+		$ext-button-icon-close: "%button-icon-close"; //
+		@extend #{$ext-button-icon-close}; //
+	}
+}
+
+.modal{
+	@extend %bbb-modal;
+	&--content{
+		@extend %bbb-modal-content;
+	}
+}
+.closer{
+	@extend %bbb-modal-close;
+}
