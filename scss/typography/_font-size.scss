@@ -118,11 +118,12 @@ $ext-font-p: "%#{$pre}-p";//
 	}
 
 	// Styling for link in P
-	a{
-		position: relative; cursor: pointer; display: inline-block;
-		&:before{
-			background-color: color(Black);
-		}
-		@include bottom-line(color(White),1px,7px,true);
+}
+$ext-font-link: "%#{$pre}-anchor";//
+#{$ext-font-link}{
+	position: relative; cursor: pointer; display: inline-block;
+	&:before{
+		background-color: color(Black);
 	}
+	@include bottom-line(color(White),1px,7px,true);
 }
