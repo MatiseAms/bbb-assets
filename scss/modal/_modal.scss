@@ -3,11 +3,17 @@ $extending-class: "%#{$pre}-modal";
 	overflow: scroll; position: fixed; width: 100vw; height: 100vh; background-color: color(Black,0); left: 0; top: -100vh; z-index: 15;
 
 	&-content{
-		display: inline-flex; position: relative; width: 100%; padding: 0 grid(0.75); @include calc("top", "60px + #{$grid-150}");
+		display: flex; position: relative; width: 100%; padding: 0 grid(0.75); @include calc("top", "60px + #{$grid-150}");
 		.column{
-			flex-basis: 0; flex-grow: 1;
+			flex-basis: 0; flex-grow: 1; flex-wrap: wrap;
 			.content{
 				opacity: 0; overflow: hidden; margin: 0 grid(0.25); background-color: color(White); background-color: white; padding: grid(0.5); transform: translateX(-100%) scale(0,1);
+			}
+		}
+		@media #{$mobile}{
+			flex-direction: column;
+			.column{
+				margin-bottom: grid(1);
 			}
 		}
 	}

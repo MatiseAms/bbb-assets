@@ -1,12 +1,15 @@
 $currency: (
-  "usd" : "$",
   "euro" : "€",
   "eypo" : "€",
+  "EUR" : "€",
+  "usd" : "$",
+  "USD" : "$",
   "dollar" : "$",
+  "GBP": "£",
   "pound" : "£",
   "pond" : "£",
   "uk" : "£",
-  "e" : "$",
+  "e" : "$"
 );
 @mixin addCurrency(){
 	@each $cur-name, $cur-value in $currency{
@@ -19,8 +22,8 @@ $currency: (
 	}
 }
 
-
-.price{
+$extending-class: "%#{$pre}-price";
+#{$extending-class}{
 	@extend #{$ext-price-font-family}; font-size: rem(20);
 	.fraction, &[data-fraction]:after{
 		line-height: rem(15); margin-left: 3px; position: relative; top: -2px; border-bottom: 1px solid black; display: inline-block; font-size: 1rem; content: "00";
@@ -68,4 +71,8 @@ $currency: (
 		content: "/ " attr(data-currency);
 	}
 	@include addCurrency();
+}
+
+.price{
+	@extend %bbb-price;
 }
