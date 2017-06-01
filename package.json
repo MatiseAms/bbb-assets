@@ -1,6 +1,6 @@
 {
   "name": "bbb-assets",
-  "version": "1.8.3",
+  "version": "1.8.4",
   "description": "Implementable BBB Assets for build website and campaigns",
   "main": "index.js",
   "scripts": {
