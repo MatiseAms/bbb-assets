@@ -8,7 +8,9 @@
 	.st1{fill:#222F63;}
 	.st2{fill:#FFFFFF;}
 	.st3{fill:#1C1D1D;}
-	.st4{fill:#1D1D1D;}
+	.st4{fill:#DEE5EB;}
+	.st5{fill:#1D1D1D;}
+	.st6{fill:#1D1D1B;}
 </style>
 <rect class="st1" width="122.3" height="68.1"/>
 <path class="st2" d="M88.1,32.4L88.1,32.4c3.1,0,5.5-2.5,5.5-5.5c0-3.1-2.5-5.5-5.6-5.5h-7.9v11L88.1,32.4z M80.2,47.4h9.6
