@@ -2,7 +2,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20161003 at Mon May 29 09:40:44 2017
+Created by FontForge 20161003 at Fri Sep  8 14:25:11 2017
  By Sil van Diepen
 </metadata>
 <defs>
@@ -18,7 +18,7 @@ Created by FontForge 20161003 at Mon May 29 09:40:44 2017
     bbox="0 -55 614 439"
     underline-thickness="25"
     underline-position="-76"
-    unicode-range="U+F1001-F1008"
+    unicode-range="U+F1001-F100B"
   />
 <missing-glyph 
 d="M17 0v341h136v-341h-136zM34 17h102v307h-102v-307z" />
@@ -32,18 +32,28 @@ d="M17 0v341h136v-341h-136zM34 17h102v307h-102v-307z" />
 d="M5 116q-5 6 -5 14t6 13l101 101q5 6 13 6t13.5 -5.5t5.5 -13.5t-6 -14l-87 -87l87 -88q6 -5 6 -13t-5.5 -13.5t-13.5 -5.5t-13 5z" />
     <glyph glyph-name="arrow-right" unicode="&#xf1002;" 
 d="M133 143q6 -5 6 -13t-5 -14l-102 -101q-5 -5 -13 -5t-13.5 5.5t-5.5 13.5t6 13l87 88l-87 87q-6 6 -6 14t5.5 13.5t13.5 5.5t13 -6z" />
-    <glyph glyph-name="close" unicode="&#xf1003;" 
+    <glyph glyph-name="cart" unicode="&#xf1003;" 
+d="M182.5 73q13.5 0 23 -9.5t9.5 -23t-9.5 -23t-23 -9.5t-23.5 9.5t-10 23t10 23t23.5 9.5zM358 73q14 0 23.5 -9.5t9.5 -23t-9.5 -23t-23.5 -9.5q-8 0 -16 4t-12 11.5t-4 16.5t4 16.5t12 12t16 4.5zM442 326q3 -4 3 -9l-23 -142q0 -1 -0.5 -1t-0.5 -0.5v-1.5l-1 -1v-1
+q-1 -1 -1 -1.5t-1 -0.5l-1 -1h-0.5t-0.5 -0.5t-1 -0.5h-1q0 -1 -1 -1h-1h-1l-241 -19l-6 -29h231q4 0 7.5 -3.5t3.5 -8t-3.5 -8t-7.5 -3.5h-245h-2h-1l-0.5 0.5t-1.5 0.5l-0.5 0.5t-1.5 0.5v1l-2 1v1l-0.5 0.5l-0.5 0.5v1l-1 1v1v1v1v1v2l11 49l-35 159l-6 27l-32 11
+q-11 3 -7.5 14t14.5 8l39 -13q0 -1 1 -1h0.5t0.5 -0.5t1 -0.5l0.5 -0.5l0.5 -0.5l1 -1q1 -1 1 -1.5v-0.5l1 -1v-1v-1l6 -24h297q6 0 9 -4z" />
+    <glyph glyph-name="close" unicode="&#xf1004;" 
 d="M384 206l-78 -78l78 -78l-36 -37l-78 79l-78 -79l-37 37l79 78l-79 78l37 37l78 -79l78 79z" />
-    <glyph glyph-name="loading" unicode="&#xf1004;" 
+    <glyph glyph-name="loading" unicode="&#xf1005;" 
 d="M0 134.5q0 21.5 15 36.5t36 15t36 -15t15 -37q0 -14 -6.5 -25.5t-18.5 -18.5t-26 -7q-21 0 -36 15t-15 36.5zM256 134.5q0 21.5 15 36.5t36 15t36 -15t15 -37q0 -14 -6.5 -25.5t-18.5 -18.5t-26 -7q-21 0 -36 15t-15 36.5zM512 134.5q0 21.5 15 36.5t36 15t36 -15t15 -37
 q0 -10 -4 -19.5t-10.5 -16.5t-16 -11t-20.5 -4q-21 0 -36 15t-15 36.5z" />
-    <glyph glyph-name="location" unicode="&#xf1005;" 
+    <glyph glyph-name="location" unicode="&#xf1006;" 
 d="M401 379q60 -60 60 -144.5t-61 -144.5l-144 -145l-145 145q-60 60 -60 144.5t60 144.5t145 60t145 -60zM340.5 150q34.5 35 34.5 84.5t-35 84.5t-84.5 35t-84 -35t-34.5 -84.5t35 -84.5t84.5 -35t84 35z" />
-    <glyph glyph-name="minus" unicode="&#xf1006;" 
+    <glyph glyph-name="minus" unicode="&#xf1007;" 
 d="M0 154h273v-52h-273v52z" />
-    <glyph glyph-name="plus" unicode="&#xf1007;" 
+    <glyph glyph-name="plus" unicode="&#xf1008;" 
 d="M273 102h-111v-110l-51 -1v111h-111v52l111 -1v111h51v-111l111 1v-52z" />
-    <glyph glyph-name="search" unicode="&#xf1008;" 
+    <glyph glyph-name="search" unicode="&#xf1009;" 
 d="M457 9l-18 -18l-88 88q-46 -41 -108 -41q-45 0 -83.5 22.5t-60.5 61t-22 83.5q0 69 49 117.5t117.5 48.5t117.5 -48.5t49 -117.5q0 -62 -40 -108zM243 64q58 0 99.5 41.5t41.5 99.5t-41.5 99.5t-99.5 41.5t-99.5 -41.5t-41.5 -99.5t41.5 -99.5t99.5 -41.5z" />
+    <glyph glyph-name="zoom-in" unicode="&#xf100a;" 
+d="M457 9l-18 -18l-88 88q-46 -41 -108 -41q-45 0 -83.5 22.5t-60.5 61t-22 83.5q0 69 49 117.5t117.5 48.5t117.5 -48.5t49 -117.5q0 -62 -40 -108zM243 64q58 0 99.5 41.5t41.5 99.5t-41.5 99.5t-99.5 41.5t-99.5 -41.5t-41.5 -99.5t41.5 -99.5t99.5 -41.5zM230 138v134
+h26v-134h-26zM243 138zM243 272zM176 192v26h134v-26h-134zM310 205zM176 205z" />
+    <glyph glyph-name="zoom-out" unicode="&#xf100b;" 
+d="M457 9l-18 -18l-88 88q-46 -41 -108 -41q-45 0 -83.5 22.5t-60.5 61t-22 83.5q0 69 49 117.5t117.5 48.5t117.5 -48.5t49 -117.5q0 -62 -40 -108zM243 64q58 0 99.5 41.5t41.5 99.5t-41.5 99.5t-99.5 41.5t-99.5 -41.5t-41.5 -99.5t41.5 -99.5t99.5 -41.5zM243 138z
+M176 192v26h134v-26h-134zM310 205zM176 205z" />
   </font>
 </defs></svg>
