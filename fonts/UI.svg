@@ -2,7 +2,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20161003 at Fri Sep  8 14:25:11 2017
+Created by FontForge 20161003 at Thu Oct  5 16:33:21 2017
  By Sil van Diepen
 </metadata>
 <defs>
@@ -15,10 +15,10 @@ Created by FontForge 20161003 at Fri Sep  8 14:25:11 2017
     panose-1="2 0 5 9 0 0 0 0 0 0"
     ascent="448"
     descent="-64"
-    bbox="0 -55 614 439"
+    bbox="0 -64 614 447"
     underline-thickness="25"
     underline-position="-76"
-    unicode-range="U+F1001-F100B"
+    unicode-range="U+F1001-F100C"
   />
 <missing-glyph 
 d="M17 0v341h136v-341h-136zM34 17h102v307h-102v-307z" />
@@ -45,14 +45,16 @@ q0 -10 -4 -19.5t-10.5 -16.5t-16 -11t-20.5 -4q-21 0 -36 15t-15 36.5z" />
 d="M401 379q60 -60 60 -144.5t-61 -144.5l-144 -145l-145 145q-60 60 -60 144.5t60 144.5t145 60t145 -60zM340.5 150q34.5 35 34.5 84.5t-35 84.5t-84.5 35t-84 -35t-34.5 -84.5t35 -84.5t84.5 -35t84 35z" />
     <glyph glyph-name="minus" unicode="&#xf1007;" 
 d="M0 154h273v-52h-273v52z" />
-    <glyph glyph-name="plus" unicode="&#xf1008;" 
+    <glyph glyph-name="panel-close" unicode="&#xf1008;" 
+d="M511 403l-211 -212l211 -211l-44 -44l-212 211l-211 -211l-44 44l211 211l-211 212l44 44l211 -211l212 211z" />
+    <glyph glyph-name="plus" unicode="&#xf1009;" 
 d="M273 102h-111v-110l-51 -1v111h-111v52l111 -1v111h51v-111l111 1v-52z" />
-    <glyph glyph-name="search" unicode="&#xf1009;" 
+    <glyph glyph-name="search" unicode="&#xf100a;" 
 d="M457 9l-18 -18l-88 88q-46 -41 -108 -41q-45 0 -83.5 22.5t-60.5 61t-22 83.5q0 69 49 117.5t117.5 48.5t117.5 -48.5t49 -117.5q0 -62 -40 -108zM243 64q58 0 99.5 41.5t41.5 99.5t-41.5 99.5t-99.5 41.5t-99.5 -41.5t-41.5 -99.5t41.5 -99.5t99.5 -41.5z" />
-    <glyph glyph-name="zoom-in" unicode="&#xf100a;" 
+    <glyph glyph-name="zoom-in" unicode="&#xf100b;" 
 d="M457 9l-18 -18l-88 88q-46 -41 -108 -41q-45 0 -83.5 22.5t-60.5 61t-22 83.5q0 69 49 117.5t117.5 48.5t117.5 -48.5t49 -117.5q0 -62 -40 -108zM243 64q58 0 99.5 41.5t41.5 99.5t-41.5 99.5t-99.5 41.5t-99.5 -41.5t-41.5 -99.5t41.5 -99.5t99.5 -41.5zM230 138v134
 h26v-134h-26zM243 138zM243 272zM176 192v26h134v-26h-134zM310 205zM176 205z" />
-    <glyph glyph-name="zoom-out" unicode="&#xf100b;" 
+    <glyph glyph-name="zoom-out" unicode="&#xf100c;" 
 d="M457 9l-18 -18l-88 88q-46 -41 -108 -41q-45 0 -83.5 22.5t-60.5 61t-22 83.5q0 69 49 117.5t117.5 48.5t117.5 -48.5t49 -117.5q0 -62 -40 -108zM243 64q58 0 99.5 41.5t41.5 99.5t-41.5 99.5t-99.5 41.5t-99.5 -41.5t-41.5 -99.5t41.5 -99.5t99.5 -41.5zM243 138z
 M176 192v26h134v-26h-134zM310 205zM176 205z" />
   </font>
