@@ -50,12 +50,7 @@
 			@elseif $icon-name == "loading"{
 				padding-right: 67px !important;
 				&:after{
-					text-align: left; overflow: hidden; font-size: 1.2rem; position: absolute; left: 100%; margin-left: -54px; width: 2rem;
-				}
-				&:hover{
-					&:after{
-						animation: bumpLoader 0.8s steps(4,end) 1s infinite;
-					}
+					text-align: left; overflow: hidden; font-size: 1.2rem; position: absolute; left: 100%; margin-left: -54px; width: 2rem; animation: bumpLoader 0.8s steps(4,end) 1s infinite; top: 50%; transform: translateY(-50%); height: 20px;
 				}
 			}
 			@else{
