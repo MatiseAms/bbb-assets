@@ -45,9 +45,9 @@ $extending-class: "%#{$pre}-price";
 	}
 	@for $i from 1 through 99{
 		@if($i < 10){
-			&[data-fraction="#{$i}0"], &[data-fraction="#{$i}"]{
+			&[data-fraction="0#{$i}"], &[data-fraction="#{$i}"]{
 				&:after{
-					content: "0#{$i}";
+					content: "#{$i}0";
 				}
 			}
 		} @else{
