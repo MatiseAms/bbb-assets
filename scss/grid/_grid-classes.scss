@@ -1,3 +1,7 @@
+
+$helper-classes: true !default;
+$column-classes: ('col', 'column', 'columns') !default;
+
 @mixin createGridClasses($child: false){
 	$childClass: "";
 	@if $child == true{
@@ -8,14 +12,16 @@
 		&.column-#{$column}{
 			width: #{$percentage};
 		}
-		&.offset-#{$column}{
-			margin-left: #{$percentage};
-		}
-		&.push-#{$column}{
-			margin-right: #{$percentage};
-		}
-		&.pull-#{$column}{
-			margin-left: -#{$percentage};
+		@if $helper-classes{
+			&.offset-#{$column}{
+				margin-left: #{$percentage};
+			}
+			&.push-#{$column}{
+				margin-right: #{$percentage};
+			}
+			&.pull-#{$column}{
+				margin-left: -#{$percentage};
+			}
 		}
 	}
 
@@ -44,6 +50,8 @@
 				&.#{$bp-name}-only-#{$a}#{$childClass}{
 					width: $percentage;
 				}
+				@if $helper-classes{
+
 				&.offset-#{$bp-name}-only-#{$a}#{$childClass}{
 					margin-left: $percentage;
 				}
@@ -53,6 +61,7 @@
 				&.pull-#{$bp-name}-only-#{$a}#{$childClass}{
 					margin-left: -#{$percentage};
 				}
+			}
 			}
 		}
 		@media #{$mq}{
@@ -70,14 +79,16 @@
 				&.#{$bp-name}-#{$a}#{$childClass}{
 					width: $percentage;
 				}
-				&.offset-#{$bp-name}-#{$a}#{$childClass}{
-					margin-left: $percentage;
-				}
-				&.push-#{$bp-name}-#{$a}#{$childClass}{
-					margin-right: $percentage;
-				}
-				&.pull-#{$bp-name}-#{$a}#{$childClass}{
-					margin-left: -#{$percentage};
+				@if $helper-classes{
+					&.offset-#{$bp-name}-#{$a}#{$childClass}{
+						margin-left: $percentage;
+					}
+					&.push-#{$bp-name}-#{$a}#{$childClass}{
+						margin-right: $percentage;
+					}
+					&.pull-#{$bp-name}-#{$a}#{$childClass}{
+						margin-left: -#{$percentage};
+					}
 				}
 			}
 		}
@@ -98,8 +109,10 @@
 		padding: grid(0.25); font-family: inherit;
 	}
 }
-//@include wildcard('col-'){ @extend %col; }
-.col, .column, .columns{
-	@extend %col;
-	@include createGridClasses(false);
+
+@each $col-class in $column-classes{
+	.#{$col-class}{
+		@extend %col;
+		@include createGridClasses(false);
+	}
 }
