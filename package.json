@@ -1,12 +1,12 @@
 {
   "name": "bbb-assets",
-  "version": "1.10.5",
+  "version": "1.10.6",
   "description": "Implementable BBB Assets for build website and campaigns",
   "main": "index.js",
   "scripts": {
-		"test": "node-sass test/test.scss temp/test.css",
-		"test-dev": "node-sass test/test.scss temp/test.css --watch",
-		"prepublishOnly": "npm run test"
+    "test": "node-sass test/test.scss temp/test.css",
+    "test-dev": "node-sass test/test.scss temp/test.css --watch",
+    "prepublishOnly": "npm run test"
   },
   "repository": {
     "type": "git",
