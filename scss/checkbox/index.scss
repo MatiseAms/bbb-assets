@@ -1,0 +1,55 @@
+$extending-class: '%#{$pre}-checkbox';
+#{$extending-class} {
+	display: block;
+	position: relative; 
+	label {
+		display: block;
+		position: relative;
+		padding-left: 28px;
+		box-sizing: border-box;
+		line-height: 2rem; 
+		&:before {
+			width: 1rem;
+			height: 1rem;
+			content: '';
+			position: absolute;
+			top: 6px; 
+			left: 0;
+			box-shadow: 0 0 0 2px color(Black) inset;
+			transition: box-shadow .3s ease-in-out; 
+		}
+		&:after {
+			width: 5px;
+			height: 5px;
+			position: absolute;
+			left: 5px;
+			top: 9px;
+			content: '';
+			display: block;
+			width: 3px;
+			height: 5px;
+			border-right: 2px solid color(White, 0);
+			border-bottom: 2px solid color(White, 0);
+			transform: translateY(200%) rotate(45deg);
+			transition: transform .3s ease-in-out; 
+		}
+	}
+	input[type='checkbox'] {
+		position: absolute;
+		width: 0;
+		height: 0;
+		appearance: none;
+		&:checked {
+			& + label {
+				&:before {
+					box-shadow: 0 0 0 10px color(Black) inset;
+				}
+				&:after {
+					border-right: 2px solid color(White, 1);
+					border-bottom: 2px solid color(White, 1);
+					transform: translateY(0%) rotate(45deg);
+				}
+			}
+		}
+	}
+}

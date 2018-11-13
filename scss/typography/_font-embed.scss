@@ -17,7 +17,7 @@ $font-black: map-get($bbb-main-font-weights,SemiBold); //
 	and font-list for a list using the $*-font-weights list
 */
 $bbb-main-font: "Montserrat"; //
-$bbb-main-font-name: "Montserrat-"; //
+$bbb-main-font-name: "Montserrat"; //
 $bbb-main-font-family: #{$bbb-main-font},sans-serif; //
 // include main font
 @include font-list($bbb-main-font,$bbb-main-font-name,$bbb-main-font-weights,normal); //

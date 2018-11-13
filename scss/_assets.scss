@@ -1,8 +1,22 @@
-@import
-  "default",
-  "colors",
-  "functions/functions",
-  "grid/grid",
-  "mixins/mixins",
-  "animation",
-  "media-queries";
+@import 'default';
+
+@import 'henris';
+
+$mobile: "screen and (max-width: 750px)"; //
+$tablet: "screen and (min-width: 751px) and (max-width: 1200px)"; //
+$tablet-portrait: "screen and (min-width: 751px) and (max-width: 1000px)"; //
+$tablet-landscape: "screen and (min-width: 800px) and (max-width: 1200px)"; //
+$desktop: "screen and (min-width: 1000px)"; //
+$under-desktop: "screen and (max-width: 999px)"; //
+
+
+
+
+@each $color-name, $color-value in $colors{
+	%bg-#{$color-name}{
+		background-color: $color-value;
+	}
+	%text-#{$color-name}{
+		color: $color-value;
+	}
+}

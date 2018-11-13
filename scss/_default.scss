@@ -1,53 +1,62 @@
-$pre: "bbb"; //
+$pre: 'bbb'; //
 
 // Legacy:
 $image-path: $bbb-image-path !default; //
 $font-path: $bbb-image-path !default; //
 
-
-$image-path: "images/" !default; //
-$font-path: "fonts/" !default; //
+$image-path: 'images/' !default; //
+$font-path: 'fonts/' !default; //
+$base-letter-spacing: 50; 
 
 $bbb-default: (
-  "font-size": 16,
-  "font-path": $bbb-font-path,
-  "image-path": $bbb-image-path,
-  "font-line-height": 1.5,
-  "font-letter-spacing": 50,
-  "grid-columns": 24,
-  "grid-row-width": 4096,
-  "grid-design-width": 1920,
-  "grid-screen": "only screen",
-  "grid-breakpoints": (
-    "small": 800,
-    "medium": 960,
-    "large": 1600,
-    "xlarge": 9999 ),
-  "grid-parts":(
-    "full": 1/1,
-    "half": 1/2,
-    "third": 1/3,
-    "quarter": 1/4,
-    "fifth": 1/5,
-    "sixth": 1/6,
-    "two-third": 2/3,
-    "three-quarter": 3/4,
-    "two-fifth": 2/5,
-    "three-fifth": 3/5,
-    "four-fifth": 4/5 ),
-  "border-radius": rem(3),
-  "round-border-radius": 0.5rem,
-  "border-round": 50%,
-  "space": rem(20),
-  "transition-time": 0.2,
-  "transition": 0.2s,
-  "cubic-bezier": cubic-bezier(0.75,0.75,0.25,0.50),
-  "bezier": cubic-bezier(0.75,0.75,0.25,0.50),
+	'font-size': 16,
+	'font-path': $bbb-font-path,
+	'image-path': $bbb-image-path,
+	'font-line-height': 1.5,
+	'font-letter-spacing': 50,
+	'grid-columns': 24,
+	'grid-row-width': 4096,
+	'grid-design-width': 1920,
+	'grid-screen': 'only screen',
+	'grid-breakpoints': (
+		'small': 800,
+		'medium': 960,
+		'large': 1600,
+		'xlarge': 9999
+	),
+	'grid-parts': (
+		'full': 1/1,
+		'half': 1/2,
+		'third': 1/3,
+		'quarter': 1/4,
+		'fifth': 1/5,
+		'sixth': 1/6,
+		'two-third': 2/3,
+		'three-quarter': 3/4,
+		'two-fifth': 2/5,
+		'three-fifth': 3/5,
+		'four-fifth': 4/5
+	),
+	'border-radius': rem(3),
+	'round-border-radius': 0.5rem,
+	'border-round': 50%,
+	'space': rem(20),
+	'transition-time': 0.2,
+	'transition': 0.2s,
+	'cubic-bezier': cubic-bezier(0.75, 0.75, 0.25, 0.5),
+	'bezier': cubic-bezier(0.75, 0.75, 0.25, 0.5)
 );
-@function default($value){
-	@return map-get($bbb-default,$value);
+@function default($value) {
+	@return map-get($bbb-default, $value);
 }
 
-%reset{
-	-webkit-appearance: none; outline: none; box-sizing: border-box; -webkit-overflow-scrolling: touch; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; -webkit-backface-visibility: hidden;
+%reset {
+	-webkit-appearance: none;
+	outline: none;
+	box-sizing: border-box;
+	-webkit-overflow-scrolling: touch;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	-webkit-backface-visibility: hidden;
 }

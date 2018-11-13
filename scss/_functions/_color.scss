@@ -106,7 +106,7 @@
 	$light: color(White)
 ) {
 	$color: black;
-	@if color($value, 1, $main-colors, false, true) {
+	@if color($value, 1, $colors, false, true) {
 		$color: color($value);
 	} @else {
 		$color: $value;

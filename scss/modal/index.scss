@@ -3,7 +3,7 @@ $extending-class: "%#{$pre}-modal";
 	overflow: scroll; position: fixed; width: 100vw; height: 100vh; background-color: color(Black,0); left: 0; top: -100vh; z-index: 15;
 
 	&-content{
-		display: flex; position: relative; width: 100%; padding: 0 grid(0.75); @include calc("top", "60px + #{$grid-150}");
+		display: flex; position: relative; width: 100%; padding: 0 grid(0.75); top: calc(60px + #{$grid-150});
 		.column{
 			flex-basis: 0; flex-grow: 1; flex-wrap: wrap;
 			.content{

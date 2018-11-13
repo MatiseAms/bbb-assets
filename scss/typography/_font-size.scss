@@ -12,7 +12,7 @@ $minus: 0.1066;//
 $ext-heading-h1: "%#{$pre}-h1";//
 #{$ext-heading-h1}{
 	@extend #{$ext-header-default}; font-size: grid(0.75); line-height: grid((0.75 * 1.25)); font-weight: $font-bold; $spacing: (0.75 * $minus); letter-spacing: -#{$spacing}vw;
-	@include min-fontsize(0.75,24){
+	@include min-('font-size',0.75,24){
 		font-size: rem(24); line-height: rem(24 * 1.25); letter-spacing: letter-spacing(rem(24),-25);
 	}
 }
@@ -29,21 +29,21 @@ $ext-heading-h1: "%#{$pre}-h1";//
 $ext-heading-h2: "%#{$pre}-h2";//
 #{$ext-heading-h2}{
 	@extend #{$ext-header-default}; font-size: grid(0.75); line-height: grid((0.75 * 1.25)); font-weight: $font-bold; $spacing: (0.75 * $minus); letter-spacing: -#{$spacing}vw;
-	@include min-fontsize(0.75,24){
+	@include min-('font-size',0.75,24){
 		line-height: rem(24 * 1.25); letter-spacing: letter-spacing(rem(24),-25);
 	}
 }
 $ext-heading-h3: "%#{$pre}-h3";//
 #{$ext-heading-h3}{
 	@extend #{$ext-header-default}; font-size: grid(0.4); line-height: grid((0.4 * 1.25)); font-weight: $font-bold; $spacing: (0.4 * $minus); letter-spacing: -#{$spacing}vw;
-	@include min-fontsize(0.4,20){
+	@include min-('font-size',0.4,20){
 		line-height: rem(20 * 1.25); letter-spacing: letter-spacing(rem(20),-25);
 	}
 }
 $ext-heading-h4: "%#{$pre}-h4";//
 #{$ext-heading-h4}{
 	@extend #{$ext-header-default}; font-size: grid(0.3); line-height: grid((0.3 * 1.25)); font-weight: $font-bold; $spacing: (0.3 * $minus); letter-spacing: -#{$spacing}vw;
-	@include min-fontsize(0.3,16){
+	@include min-('font-size',0.3,16){
 		line-height: rem(16 * 1.25); letter-spacing: letter-spacing(rem(16),-25);
 	}
 }
@@ -125,5 +125,5 @@ $ext-font-link: "%#{$pre}-anchor";//
 	&:before{
 		background-color: color(Black);
 	}
-	@include bottom-line(color(White),1px,7px,true);
+	// @include bottom-line(color(White),rem(1),rem(7),true);
 }

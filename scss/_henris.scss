@@ -1,0 +1,29 @@
+// Load custom-output & setting tools
+
+@import 'node_modules/henris/custom-output';
+
+// Base Colors
+$custom-colors: (
+	"Black": #1d1d1d,
+	"White": #ffffff,
+  "Darkblue": #212e63,
+  "Grey": #4d4d4d,
+  "Cyan": #1dafec,
+  "ProcessBlue": #009ad7,
+  "Lightgrey": #929496,
+  "Weblightgrey": #eff3f6,
+  "Webmidgrey": #dee5eb,
+	"Green": #94db99,
+	"Blue": #1eaece,
+	"Red": #e98498,
+	"Orange": #e86d02,
+	"Yellow": #ff961e,
+  "Pink": #ea4c89,
+  "Purple": #8b008b
+);
+
+// Add custom project colors
+$output: set-output(css, false);
+
+
+@import 'node_modules/henris/index';

@@ -18,7 +18,7 @@
     } @else if $type == 'width'{
       @if $margin{
         #{elementCount($i)}{
-          @include calc('width','#{percentage(1/$i)} - #{$margin}');
+          width: calc(#{percentage(1/$i)} - #{$margin});
         }
       } @else {
         #{elementCount($i)}{

@@ -10,12 +10,12 @@ $extending-class-breadcrumb: "%#{$pre}-breadcrumb";
 			}
 			&-link{
 				cursor: pointer; $c: c($c); display: inline-block; padding: 0 0;
-				@include bottom-line(color(Black),2px,4px);
+				@include bottom-line(color(Black),rem(2),rem(4));
 			}
 			&-text{
 				$c: c($c); color: color(Lightgrey); line-height: grid(0.75);
 				@extend %bbb-main-font-family; font-size: rem(14); display: block;
-				@include min-line-height(0.75,32);
+				@include min-('line-height',0.75,32);
 			}
 			&:first-child{
 				padding-left: 0;

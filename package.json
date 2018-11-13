@@ -4,8 +4,8 @@
   "description": "Implementable BBB Assets for build website and campaigns",
   "main": "index.js",
   "scripts": {
-    "test": "node-sass test/test.scss temp/test.css",
-    "test-dev": "node-sass test/test.scss temp/test.css --watch",
+    "build": "node-sass test/test.scss temp/test.css",
+    "dev": "node-sass test/test.scss temp/test.css --watch",
     "prepublishOnly": "npm run test"
   },
   "repository": {
@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/MatiseAms/bbb-assets#readme",
   "dependencies": {
+    "henris": "^0.4.2",
     "node-sass": "^4.8.3"
   }
 }
