@@ -1,11 +1,12 @@
 $bbb-main-font-weights: (
+	"Regular": 400,
 	"Medium": 500,
 	"SemiBold": 600
 ); //
 //
 $font-thin: map-get($bbb-main-font-weights,Medium); //
 $font-light: map-get($bbb-main-font-weights,Medium); //
-$font-regular: map-get($bbb-main-font-weights,Medium); //
+$font-regular: map-get($bbb-main-font-weights,Regular); //
 $font-medium: map-get($bbb-main-font-weights,Medium); //
 $font-semibold: map-get($bbb-main-font-weights,SemiBold); //
 $font-bold: map-get($bbb-main-font-weights,SemiBold); //
