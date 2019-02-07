@@ -100,7 +100,7 @@ $ext-font-sup: "%#{$pre}-sup";//
 
 $ext-font-p: "%#{$pre}-p";//
 #{$ext-font-p}{
-	margin: 0; padding: 0; font-size: rem(16); line-height: rem(32); @extend #{$ext-body-font-family}; font-weight: 400;
+	margin: 0; padding: 0; font-size: rem(16); line-height: rem(32); @extend #{$ext-body-font-family}; font-weight: 500;
 	&.text-tiny{
 		font-size: rem(12);
 	}
