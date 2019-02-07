@@ -49,7 +49,7 @@ $ext-heading-h4: "%#{$pre}-h4";//
 }
 $ext-heading-h5: "%#{$pre}-h5";//
 #{$ext-heading-h5}{
-	@extend #{$ext-header-default}; font-size: rem(14); line-height: rem((14 * 1.25)); padding-left: grid(0.5); font-weight: $font-regular; letter-spacing: letter-spacing(rem(14),-25);
+	@extend #{$ext-header-default}; font-size: rem(14); line-height: rem((14 * 1.25)); padding-left: grid(0.5); font-weight: $font-medium; letter-spacing: letter-spacing(rem(14),-25);
 	@media #{$mobile}{
 		padding-left: grid(1);
 	}
